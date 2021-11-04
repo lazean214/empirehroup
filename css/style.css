@@ -82,6 +82,7 @@ section {
 }
 
 .title_bg .title_bg-split {
+  display: none;
   position: absolute;
   left: 50%;
   top: 20%;
@@ -259,28 +260,43 @@ footer .footer_copy h5 {
   letter-spacing: 1px;
 }
 
+/*=================================
+=       Standard Screen
+==================================*/
+@media screen and (min-width: 768px) {
+  .title_bg .title_bg-split {
+    display: block;
+  }
+  .title_bg .title_bg-split .line {
+    font-size: 200px;
+  }
+  .container {
+    max-width: 900px;
+  }
+}
+
+/*=================================
+=       Large Screen
+==================================*/
 @media screen and (min-width: 1200px) {
   h2 {
     font-weight: 700;
   }
-  .about__bg {
+  .title_bg {
     height: 100vh;
   }
-  .about__bg-split {
+  .title_bg-split {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  .about__bg-split .line {
+  .title_bg-split .line {
     font-size: 300px !important;
     margin: 0 20PX;
   }
   .wrapper {
     padding: 150px;
-  }
-  .company {
-    margin: 0 3rem;
   }
   .company__inner {
     position: relative;
@@ -300,9 +316,6 @@ footer .footer_copy h5 {
     opacity: 1;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-  }
-  .card_mask {
-    background-color: rgba(0, 0, 0, 0.7);
   }
   .company_lists {
     font-size: 0;
