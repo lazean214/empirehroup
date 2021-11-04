@@ -390,6 +390,7 @@ footer {
     }
 
     .footer__maps {
+        background-color: #111111;
         .cssmap-container {
             position: absolute;
             right: 0;
@@ -431,7 +432,8 @@ footer {
 
 @media screen and (min-width: 548px){
     .cssmap-650 .continents {
-        height: 174px;
+        height: 100px;
+        overflow: hidden;
     }
 }   
 
@@ -451,9 +453,11 @@ footer {
             }
             overflow: hidden;
             #demo-markers {
-                display: none;
+                // display: none;
             }
         }
+
+        
     }
     
     .cssmap-650 .continents {
@@ -489,7 +493,11 @@ footer {
 
         .footer_content {
             border-bottom: transparent;
+            padding-bottom: 0;
+            margin-bottom: 0;
         }
+
+        
 
         
     }

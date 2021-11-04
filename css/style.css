@@ -353,6 +353,7 @@ footer .header-split {
 }
 
 footer .footer__maps {
+  background-color: #111111;
   overflow: hidden;
 }
 
@@ -395,7 +396,8 @@ footer .footer-title, footer .footer-info {
 
 @media screen and (min-width: 548px) {
   .cssmap-650 .continents {
-    height: 174px;
+    height: 100px;
+    overflow: hidden;
   }
 }
 
@@ -414,9 +416,6 @@ footer .footer-title, footer .footer-info {
     right: 0;
     opacity: 0.1;
     pointer-events: none;
-  }
-  .footer .footer__maps #demo-markers {
-    display: none;
   }
   .cssmap-650 .continents {
     height: 174px;
@@ -450,6 +449,8 @@ footer .footer-title, footer .footer-info {
   }
   footer .footer_content {
     border-bottom: transparent;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
