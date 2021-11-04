@@ -593,9 +593,11 @@ footer {
         border: none;
     }
 
-    .btn-close {
-        color: white !important;
-    }
+    
+}
+
+.btn-close {
+    color: white !important;
 }
 
 .modal-form {
@@ -622,6 +624,7 @@ footer {
     outline: none;
     border: 1px solid #000000;
     border-radius: 0;
+    
 }
 
 .btn-empire {
@@ -632,6 +635,7 @@ footer {
     color: #000000;
     letter-spacing: 2px;
     outline: 0;
+    transition: background-color 1s;
     &:hover {
         color: white;
         background-color: #000000;

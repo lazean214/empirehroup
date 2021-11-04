@@ -523,7 +523,7 @@ footer .footer-title, footer .footer-info {
   border: none;
 }
 
-.modal-dialog .btn-close {
+.btn-close {
   color: white !important;
 }
 
@@ -557,6 +557,8 @@ footer .footer-title, footer .footer-info {
   color: #000000;
   letter-spacing: 2px;
   outline: 0;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 .btn-empire:hover {
