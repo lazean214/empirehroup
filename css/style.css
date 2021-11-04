@@ -5,6 +5,10 @@ body {
   letter-spacing: 2px;
 }
 
+p {
+  line-height: 1.5rem;
+}
+
 .overlay {
   height: 100%;
   width: 100%;
@@ -44,6 +48,10 @@ body {
   top: 20px;
   right: 45px;
   font-size: 60px;
+}
+
+button:focus {
+  outline: 0 !important;
 }
 
 @media screen and (max-height: 450px) {
@@ -123,20 +131,114 @@ section {
   background-color: #000000;
 }
 
-footer {
-  background-color: #222222;
-  color: white;
-}
-
 .company_bg {
   background-size: cover;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 300px;
   width: 100%;
   min-height: 200px;
   background-position: center;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+.company {
+  margin: 0 5rem;
+}
+
+.company_lists {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.company_lists .company_list--item {
+  display: block;
+  width: 100%;
+  height: calc(100% / 3);
+  position: relative;
+}
+
+.company_lists .company_list--info {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  color: white;
+}
+
+.company_lists .company_list--info h2 {
+  font-weight: 700;
+}
+
+.company_lists .company_list--info h5 {
+  font-weight: 100;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #111111;
+  padding: 3rem;
+  color: white;
+  position: relative;
+}
+
+footer .header-split {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+footer .footer__maps {
+  overflow: hidden;
+}
+
+footer .footer_copy {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(50%, #111111), color-stop(70%, rgba(17, 17, 17, 0.9)), to(rgba(17, 17, 17, 0)));
+  background: linear-gradient(to top, #111111 0%, #111111 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+footer .footer_copy h5 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.btn-empire {
+  stroke-dasharray: 0 620;
+  stroke-dashoffset: 0;
+  stroke-width: 1px;
+  fill: transparent;
+  stroke: #000;
+  -webkit-transition: stroke-dasharray 1.5s linear;
+  transition: stroke-dasharray 1.5s linear;
+}
+
+/*=============================
+*           Career
+==============================*/
+.career_title {
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.career_position {
+  letter-spacing: 1px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -187,6 +289,8 @@ footer {
     left: 0;
     z-index: 2;
     height: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
   .company_lists .company_list--item {
     display: inline-block;
@@ -210,20 +314,26 @@ footer {
     transition: 2s;
   }
   .company_lists .company_list--item_bg {
-    position: absolute;
     top: 0;
     left: 0;
     width: 300%;
     height: 100%;
     z-index: -2;
-    -webkit-transition: opacity 0.5s ease;
-    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
     overflow: hidden;
     opacity: 1;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
+  }
+  .company_lists .company_list--item_bg:first-child {
+    background-position: right;
+  }
+  .company_lists .company_list--item_bg:nth-child(1) {
+    background-position: center;
+  }
+  .company_lists .company_list--item_bg:last-child {
+    background-position: right;
   }
   .company_lists .card_mask {
     position: absolute;

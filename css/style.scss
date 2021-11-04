@@ -6,6 +6,10 @@ body {
     letter-spacing: 2px
   }
   
+p {
+    line-height: 1.5rem;
+}
+
   .overlay {
     height: 100%;
     width: 100%;
@@ -46,6 +50,10 @@ body {
     font-size: 60px;
   }
   
+
+  button:focus {outline:0 !important;}
+
+
   @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
@@ -132,21 +140,121 @@ section {
     }
 }
 
-footer {
-    background-color: #222222;
-
-    color: white;
-}
 
 
 .company_bg {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 300px;
     width: 100%;
     min-height: 200px;
     background-position: center;
     transition: 1s;
+}
+
+.carousel-item {
+    img {
+        width: 100%;
+    }
+}
+
+.company {
+    margin: 0 5rem;
+}
+
+.company_lists {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .company_list--item{
+        display: block;
+        width: 100%;
+        height: calc(100% / 3);
+        position: relative;
+    }
+
+
+    .company_list--info {
+        position: absolute;
+        top: 50%;
+        z-index: 3;
+        transform: translate(0, -50%);
+        color: white;
+
+        h2 {
+            font-weight: 700;
+        }
+
+        h5 {
+            font-weight: 100;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+footer {
+    background-color: #111111;
+    padding: 3rem;
+    color: white;
+    position: relative;
+    .header-split {
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+
+    .footer__maps {
+        // transform: scale(150%);
+        overflow: hidden;
+    }
+
+    .footer_copy {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 5;
+        background: linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0.9) 70%,  rgba(17,17,17,0) 100%);
+        font-size: 12px;
+        letter-spacing: 2px;
+
+        h5 {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.btn-empire {
+    stroke-dasharray: 0 620;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+    fill: transparent;
+    stroke: #000;
+    -webkit-transition: stroke-dasharray 1.5s linear;
+    -o-transition: stroke-dasharray 1.5s linear;
+    transition: stroke-dasharray 1.5s linear;
+}
+
+
+
+
+/*=============================
+*           Career
+==============================*/
+
+.career_title {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.career_position {
+    letter-spacing: 1px;
 }
 
 
@@ -204,6 +312,8 @@ footer {
         left: 0;
         z-index: 2;
         height: 100%;
+        padding-left: 0;
+        padding-right: 0;
 
         // display: flex;
         .company_list--item {
@@ -231,22 +341,31 @@ footer {
         }
 
         .company_list--item_bg {
-            position: absolute;
+            // position: absolute;
             top: 0;
             left: 0;
             width: 300%;
             height: 100%;
             z-index: -2;
-            -webkit-transition: opacity 0.5s ease;
-            -o-transition: opacity 0.5s ease;
-            transition: opacity 0.5s ease;
+            -webkit-transition: opacity 1s ease;
+            -o-transition: opacity 1s ease;
+            transition: opacity 1s ease;
             overflow: hidden;
             opacity: 1;
-            transition:opacity 0.5s;
-            background-size: contain;
+            background-size: 100%;
             background-repeat: no-repeat;
-          
-            
+
+            &:first-child {
+                background-position: right;
+            }
+
+            &:nth-child(1){
+                background-position: center;
+            }
+
+            &:last-child {
+                background-position: right;
+            }
         }
         .card_mask {
             position: absolute;
