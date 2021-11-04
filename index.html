@@ -128,7 +128,7 @@
 </div>
 
 <section class="about">
-   
+  <div class="scroll"></div>
     <div class="title_bg">
             <div class="title_bg-split">
                 <div class="line wow fadeInUp" data-wow-delay="0.1s">A</div>
@@ -213,6 +213,7 @@
 
 
 <section class="about">
+  <div class="scroll"></div>
     <div class="title_bg">
             <div class="title_bg-split">
                 <div class="line wow fadeInUp" data-wow-delay="0.1s">C</div>
@@ -224,6 +225,7 @@
             </div>
     </div>
     <div class="wrapper-center">
+      
         <div class="container">
                 <div class="col-md-12 offset-lg-6 col-lg-6 ">
                     <h2 class="wow fadeInUp" data-wow-delay="0.1s">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
@@ -290,7 +292,31 @@
              <li class="c2"><a href="#asia">United Arab Emirates</a></li>
              <li class="c4"><a href="#europe">Ukraine</a></li>
             </ul>
-           </div>
+          </div>
+          <!-- CSSMap MARKERS -->
+<div id="demo-markers">
+  <ul class="cssmap-pins">
+   <li class="cssmap-pin" data-cssmap-coords="884,385">
+ 
+    <div class="cssmap-tooltip-content">
+     <div>United Arab Emirates</div>
+     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos voluptates minus sapiente nam commodi, ullam reiciendis nemo atque vitae, voluptas ipsum quam odio fuga a quod, earum nobis error voluptatem!</div>
+    </div>
+    <a href="#" class="cssmap-marker"><img src="includes/pin.png" width="20" height="25" alt="pin"/></a>
+ 
+   </li>
+   <li class="cssmap-pin" data-cssmap-coords="790,280">
+ 
+    <div class="cssmap-tooltip-content">
+      <div>Ukraine</div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos voluptates minus sapiente nam commodi, ullam reiciendis nemo atque vitae, voluptas ipsum quam odio fuga a quod, earum nobis error voluptatem!</div>
+    </div>
+    <a href="#" class="cssmap-marker"><img src="includes/pin.png" width="20" height="25" alt="pin"/></a>
+ 
+   </li>
+  </ul>
+ </div>
+ <!-- END OF THE CSSMap MARKERS -->
     </div>
 
     <div class="footer_copy">
@@ -341,7 +367,17 @@
       "size": 1450,
       "mapStyle": "dark",
       "tooltips": "floating-top-center",
-      "responsive": "auto"
+      "responsive": "auto",
+      "pins": {
+      "enable": true,
+      "pinsId": "#demo-markers",
+      "mapSize": 1450,
+      "markerPosition": "middle",
+      "tooltipPosition": "bottom",
+      "tooltipOnClick": true,
+      "clickableRegions": true
+    }
+      
     });
     // END OF THE CSSMap;
     

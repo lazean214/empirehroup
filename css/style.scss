@@ -275,11 +275,38 @@ footer {
     letter-spacing: 1px;
 }
 
+
+
 /*=================================
 =       Standard Screen
 ==================================*/
 
 @media screen and (min-width: 768px) {
+/*=============================
+*           Scroll
+==============================*/
+.scroll {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 1px;
+    height: 88px;
+    z-index: 1000;
+    overflow: hidden;
+    background-color: #e0e0e0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #e0e0e0;
+        top: -100%;
+        left: 0;
+        z-index: 1001;
+    }
+}
+
     .title_bg {
         .title_bg-split {
             display: block;
