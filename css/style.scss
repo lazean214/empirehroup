@@ -91,7 +91,7 @@ section {
         top: 20%;
         transform: translate(-50%, -20%);
         z-index: 1;
-        opacity: .05;
+        opacity: .02;
         width: 100%;
         color: #000000;
         text-align: center;
@@ -452,9 +452,7 @@ footer {
                 pointer-events: none;
             }
             overflow: hidden;
-            #demo-markers {
-                // display: none;
-            }
+           
         }
 
         
