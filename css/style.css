@@ -114,24 +114,10 @@ section {
           transform: translate(-50%, -50%);
 }
 
-.btn {
-  outline: none;
-  border: 1px solid #000000;
-  border-radius: 0;
-}
-
-.btn-empire {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  background-color: white;
-  color: #000000;
-  letter-spacing: 2px;
-  outline: 0;
-}
-
-.btn-empire:hover {
-  color: white;
-  background-color: #000000;
+@media screen and (min-width: 1000px) {
+  .wrapper-center {
+    width: 900px;
+  }
 }
 
 /*=============================
@@ -202,105 +188,6 @@ section {
   text-transform: uppercase;
 }
 
-/*=============================
-*           Footer
-==============================*/
-footer {
-  background-color: #111111;
-  padding: 3rem;
-  color: white;
-  position: relative;
-}
-
-footer .header-split {
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-footer .footer__maps {
-  overflow: hidden;
-}
-
-footer .footer_copy {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 5;
-  background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(50%, #111111), color-stop(70%, rgba(17, 17, 17, 0.9)), to(rgba(17, 17, 17, 0)));
-  background: linear-gradient(to top, #111111 0%, #111111 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-
-footer .footer_copy h5 {
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.btn-empire {
-  stroke-dasharray: 0 620;
-  stroke-dashoffset: 0;
-  stroke-width: 1px;
-  fill: transparent;
-  stroke: #000;
-  -webkit-transition: stroke-dasharray 1.5s linear;
-  transition: stroke-dasharray 1.5s linear;
-}
-
-/*=============================
-*           Career
-==============================*/
-.career_title {
-  font-weight: 700;
-  letter-spacing: 0;
-}
-
-.career_position {
-  letter-spacing: 1px;
-}
-
-/*=================================
-=       Standard Screen
-==================================*/
-@media screen and (min-width: 768px) {
-  /*=============================
-*           Scroll
-==============================*/
-  .scroll {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    width: 1px;
-    height: 88px;
-    z-index: 1000;
-    overflow: hidden;
-    background-color: #e0e0e0;
-  }
-  .scroll:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #e0e0e0;
-    top: -100%;
-    left: 0;
-    z-index: 1001;
-  }
-  .title_bg .title_bg-split {
-    display: block;
-  }
-  .title_bg .title_bg-split .line {
-    font-size: 200px;
-  }
-  .container {
-    max-width: 900px;
-  }
-}
-
-/*=================================
-=       Large Screen
-==================================*/
 @media screen and (min-width: 1200px) {
   h2 {
     font-weight: 700;
@@ -431,5 +318,232 @@ footer .footer_copy h5 {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
+}
+
+/*=============================
+*           Footer
+==============================*/
+footer {
+  background-color: #111111;
+  color: white;
+  display: block;
+}
+
+footer .footer_content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #303030;
+  margin-bottom: 3rem;
+}
+
+footer .footer_content h5 {
+  font-size: 12px;
+  color: #303030;
+}
+
+footer .footer_content .footer-info {
+  font-size: 12px;
+  color: white;
+}
+
+footer .header-split {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+footer .footer__maps {
+  overflow: hidden;
+}
+
+footer .footer__maps .cssmap-container {
+  position: absolute;
+  right: 0;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+footer .footer__maps #demo-markers {
+  display: none;
+}
+
+footer .footer_copy {
+  background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(50%, #111111), color-stop(70%, rgba(17, 17, 17, 0.9)), to(rgba(17, 17, 17, 0)));
+  background: linear-gradient(to top, #111111 0%, #111111 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+footer .footer_copy h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+footer .footer_copy h5 {
+  font-size: 12px;
+  color: #303030;
+}
+
+footer .footer_copy .footer-info {
+  font-size: 12px;
+  color: white;
+}
+
+@media screen and (min-width: 548px) {
+  .cssmap-650 .continents {
+    height: 174px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    position: relative;
+  }
+  .footer .footer__maps {
+    position: relative;
+    height: 200px;
+    overflow: hidden !important;
+  }
+  .cssmap-650 .continents {
+    height: 174px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 3rem;
+    position: relative;
+  }
+  footer .footer__maps {
+    display: block;
+  }
+  footer .footer__maps .cssmap-container {
+    position: relative;
+    pointer-events: inherit;
+    opacity: 1;
+  }
+  footer .footer__maps #demo-markers {
+    display: block;
+  }
+  footer .footer_copy {
+    background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(50%, #111111), color-stop(70%, rgba(17, 17, 17, 0.9)), to(rgba(17, 17, 17, 0)));
+    background: linear-gradient(to top, #111111 0%, #111111 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+  footer .footer_content {
+    border-bottom: transparent;
+  }
+}
+
+.btn-empire {
+  stroke-dasharray: 0 620;
+  stroke-dashoffset: 0;
+  stroke-width: 1px;
+  fill: transparent;
+  stroke: #000;
+  -webkit-transition: stroke-dasharray 1.5s linear;
+  transition: stroke-dasharray 1.5s linear;
+}
+
+/*=============================
+*           Career
+==============================*/
+.career_title {
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.career_position {
+  letter-spacing: 1px;
+}
+
+/*=================================
+=       Standard Screen Override
+==================================*/
+@media screen and (min-width: 768px) {
+  /*=============================
+*           Scroll
+==============================*/
+  .scroll {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 1px;
+    height: 88px;
+    z-index: 1000;
+    overflow: hidden;
+    background-color: #e0e0e0;
+  }
+  .scroll:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    top: -100%;
+    left: 0;
+    z-index: 1001;
+  }
+  .title_bg .title_bg-split {
+    display: block;
+  }
+  .title_bg .title_bg-split .line {
+    font-size: 200px;
+  }
+  .container {
+    max-width: 900px;
+  }
+}
+
+/*=============================
+*  Modal Full Screen Override
+==============================*/
+.modal-dialog .modal-body, .modal-dialog .modal-header {
+  background: #111111;
+  border: none;
+}
+
+.modal-dialog .btn-close {
+  color: white !important;
+}
+
+.modal-form {
+  color: white;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal-form .form-control {
+  border-radius: none !important;
+  background: transparent !important;
+  border: 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+.btn {
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 0;
+}
+
+.btn-empire {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: white;
+  color: #000000;
+  letter-spacing: 2px;
+  outline: 0;
+}
+
+.btn-empire:hover {
+  color: white;
+  background-color: #000000;
 }
 /*# sourceMappingURL=style.css.map */

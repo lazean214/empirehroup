@@ -115,33 +115,17 @@ section {
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
-    // background-color: orange;
-    // padding: 5rem 1rem;
+
 }   
 
 
-
-.btn {
-    outline: none;
-    border: 1px solid #000000;
-    border-radius: 0;
-}
-
-.btn-empire {
-    // transition: .5s;
-    // padding-top: 10px;
-    // padding-bottom: 10px;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    background-color: white;
-    color: #000000;
-    letter-spacing: 2px;
-    outline: 0;
-    &:hover {
-        color: white;
-        background-color: #000000;
+@media screen and (min-width: 1000px) {
+    .wrapper-center {
+        width: 900px;
     }
 }
+
+
 
 /*=============================
 *           Company Lists
@@ -213,121 +197,8 @@ section {
     }
 }
 
-/*=============================
-*           Footer
-==============================*/
-footer {
-    background-color: #111111;
-    padding: 3rem;
-    color: white;
-    position: relative;
-    .header-split {
-        font-size: 30px;
-        font-weight: 400;
-        letter-spacing: 0;
-    }
-
-    .footer__maps {
-        // transform: scale(150%);
-        overflow: hidden;
-    }
-
-    .footer_copy {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: 5;
-        background: linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0.9) 70%,  rgba(17,17,17,0) 100%);
-        font-size: 12px;
-        letter-spacing: 2px;
-
-        h5 {
-            font-size: 12px;
-            text-transform: uppercase;
-        }
-    }
-}
-
-.btn-empire {
-    stroke-dasharray: 0 620;
-    stroke-dashoffset: 0;
-    stroke-width: 1px;
-    fill: transparent;
-    stroke: #000;
-    -webkit-transition: stroke-dasharray 1.5s linear;
-    -o-transition: stroke-dasharray 1.5s linear;
-    transition: stroke-dasharray 1.5s linear;
-}
-
-
-
-
-/*=============================
-*           Career
-==============================*/
-
-.career_title {
-    font-weight: 700;
-    letter-spacing: 0;
-}
-
-.career_position {
-    letter-spacing: 1px;
-}
-
-
-
-/*=================================
-=       Standard Screen
-==================================*/
-
-@media screen and (min-width: 768px) {
-/*=============================
-*           Scroll
-==============================*/
-.scroll {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    width: 1px;
-    height: 88px;
-    z-index: 1000;
-    overflow: hidden;
-    background-color: #e0e0e0;
-
-    &:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #e0e0e0;
-        top: -100%;
-        left: 0;
-        z-index: 1001;
-    }
-}
-
-    .title_bg {
-        .title_bg-split {
-            display: block;
-
-            .line {
-                font-size: 200px;
-            }
-        }
-    }
-
-    .container {
-        max-width: 900px;
-    }
-}
-
-/*=================================
-=       Large Screen
-==================================*/
 
 @media screen and (min-width: 1200px) {
-
     h2 {
         font-weight: 700;
     }
@@ -349,9 +220,6 @@ footer {
         padding: 150px;
     }   
 
-    // .company {
-    //     margin: 0 3rem;
-    // }
     .company__inner {
         position: relative;
         height: 100vh;
@@ -482,5 +350,266 @@ footer {
         -webkit-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
+    }
+}
+
+
+
+
+
+
+/*=============================
+*           Footer
+==============================*/
+footer {
+    background-color: #111111;
+    color: white;
+    display: block;
+
+    .footer_content {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid #303030;
+        margin-bottom: 3rem;
+
+        h5 {
+            font-size: 12px;
+            color: #303030;
+        }
+
+        .footer-info {
+            font-size: 12px;
+            color: white;
+        }
+    }
+
+    .header-split {
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+
+    .footer__maps {
+        .cssmap-container {
+            position: absolute;
+            right: 0;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        overflow: hidden;
+        #demo-markers {
+            display: none;
+        }
+    }
+
+    .footer_copy {
+     
+        background: linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0.9) 70%,  rgba(17,17,17,0) 100%);
+        font-size: 12px;
+        letter-spacing: 2px;
+        h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        h5 {
+            font-size: 12px;
+            color: #303030;
+        }
+
+        .footer-info {
+            font-size: 12px;
+            color: white;
+        }
+    }
+}
+
+@media screen and (min-width: 548px){
+    .cssmap-650 .continents {
+        height: 174px;
+    }
+}   
+
+@media screen and (max-width: 767px) {
+
+    .footer {
+        position: relative;
+        .footer__maps {
+            position: relative;
+            height: 200px;
+            overflow: hidden !important; 
+        }
+    }
+    
+    .cssmap-650 .continents {
+        height: 174px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        padding: 3rem;
+        position: relative;
+
+        .footer__maps {
+            display: block;
+            .cssmap-container {
+                position: relative;
+                pointer-events: inherit;
+                opacity: 1;
+            }
+            #demo-markers {
+                display: block;
+            }
+        }
+
+        .footer_copy {
+            background: linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0.9) 70%,  rgba(17,17,17,0) 100%);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 5;
+        }
+
+        .footer_content {
+            border-bottom: transparent;
+        }
+    }
+    
+}
+
+
+
+.btn-empire {
+    stroke-dasharray: 0 620;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+    fill: transparent;
+    stroke: #000;
+    -webkit-transition: stroke-dasharray 1.5s linear;
+    -o-transition: stroke-dasharray 1.5s linear;
+    transition: stroke-dasharray 1.5s linear;
+}
+
+
+
+
+/*=============================
+*           Career
+==============================*/
+
+.career_title {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.career_position {
+    letter-spacing: 1px;
+}
+
+// .container {
+//     min-width: 100%;
+// }
+
+/*=================================
+=       Standard Screen Override
+==================================*/
+
+@media screen and (min-width: 768px) {
+/*=============================
+*           Scroll
+==============================*/
+.scroll {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 1px;
+    height: 88px;
+    z-index: 1000;
+    overflow: hidden;
+    background-color: #e0e0e0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #e0e0e0;
+        top: -100%;
+        left: 0;
+        z-index: 1001;
+    }
+}
+
+    .title_bg {
+        .title_bg-split {
+            display: block;
+
+            .line {
+                font-size: 200px;
+            }
+        }
+    }
+
+    .container {
+        max-width: 900px;
+    }
+}
+
+
+/*=============================
+*  Modal Full Screen Override
+==============================*/
+.modal-dialog {
+    .modal-body, .modal-header {
+        background: #111111;
+        border: none;
+    }
+
+    .btn-close {
+        color: white !important;
+    }
+}
+
+.modal-form {
+    // background-color: orange;
+    color: white;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .form-control {
+        border-radius: none !important;
+        background: transparent !important;
+        border: 0;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    label {
+        // color: #111111;
+    }
+}
+
+
+
+.btn {
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 0;
+}
+
+.btn-empire {
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: white;
+    color: #000000;
+    letter-spacing: 2px;
+    outline: 0;
+    &:hover {
+        color: white;
+        background-color: #000000;
     }
 }
