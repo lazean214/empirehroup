@@ -389,6 +389,10 @@ footer .footer_copy .footer-info {
   color: white;
 }
 
+footer .footer-title, footer .footer-info {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 548px) {
   .cssmap-650 .continents {
     height: 174px;
@@ -403,6 +407,16 @@ footer .footer_copy .footer-info {
     position: relative;
     height: 200px;
     overflow: hidden !important;
+    overflow: hidden;
+  }
+  .footer .footer__maps .cssmap-container {
+    position: absolute;
+    right: 0;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  .footer .footer__maps #demo-markers {
+    display: none;
   }
   .cssmap-650 .continents {
     height: 174px;
@@ -426,6 +440,7 @@ footer .footer_copy .footer-info {
     display: block;
   }
   footer .footer_copy {
+    width: 100%;
     background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(50%, #111111), color-stop(70%, rgba(17, 17, 17, 0.9)), to(rgba(17, 17, 17, 0)));
     background: linear-gradient(to top, #111111 0%, #111111 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
     position: absolute;
@@ -495,6 +510,7 @@ footer .footer_copy .footer-info {
   }
   .container {
     max-width: 900px;
+    margin: 0 auto;
   }
 }
 
