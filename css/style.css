@@ -553,7 +553,7 @@ footer .footer-title, footer .footer-info {
 .btn-empire {
   padding-left: 3rem;
   padding-right: 3rem;
-  background-color: white;
+  background-color: transparent;
   color: #000000;
   letter-spacing: 2px;
   outline: 0;
@@ -564,5 +564,15 @@ footer .footer-title, footer .footer-info {
 .btn-empire:hover {
   color: white;
   background-color: #000000;
+}
+
+.btn-empire.theme-white {
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-empire.theme-white:hover {
+  background-color: white;
+  color: #111111;
 }
 /*# sourceMappingURL=style.css.map */

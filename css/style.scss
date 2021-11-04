@@ -631,7 +631,7 @@ footer {
 
     padding-left: 3rem;
     padding-right: 3rem;
-    background-color: white;
+    background-color: transparent;
     color: #000000;
     letter-spacing: 2px;
     outline: 0;
@@ -639,5 +639,14 @@ footer {
     &:hover {
         color: white;
         background-color: #000000;
+    }
+
+    &.theme-white {
+        color: white;
+        border: 1px solid white;
+        &:hover {
+            background-color: white;
+            color: #111111;
+        }
     }
 }
