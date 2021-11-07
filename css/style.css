@@ -485,7 +485,7 @@ footer .footer-title, footer .footer-info {
 ==============================*/
   .scroll {
     position: absolute;
-    top: 10px;
+    top: 20px;
     left: 50%;
     width: 1px;
     height: 88px;
@@ -574,5 +574,49 @@ footer .footer-title, footer .footer-info {
 .btn-empire.theme-white:hover {
   background-color: white;
   color: #111111;
+}
+
+/*=================================
+*   Navigation Effects
+=================================*/
+.navbar {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* panel styles */
+.panel {
+  /* min height incase content is higher than window height */
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+  /* outline: 10px solid hotpink; */
+  /* turn above on to see the edge of panels */
+}
+
+/* colours */
+.color-white {
+  background-color: #ffffff;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.color-white a {
+  color: black !important;
+}
+
+.color-black {
+  background-color: #111111;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.color-transparent {
+  background-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
