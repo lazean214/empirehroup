@@ -503,6 +503,68 @@ footer .footer-title, footer .footer-info {
     left: 0;
     z-index: 1001;
   }
+  .scroll-animated {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 1px;
+    height: 88px;
+    z-index: 1000;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    -webkit-animation-name: scroll;
+            animation-name: scroll;
+    -webkit-animation-duration: 2.2s;
+            animation-duration: 2.2s;
+    -webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+            animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .scroll-animated:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    top: -100%;
+    left: 0;
+    z-index: 1001;
+  }
+  @-webkit-keyframes scroll {
+    0% {
+      height: 0px;
+      opacity: 0;
+    }
+    10% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(15px);
+              transform: translateY(15px);
+      height: 88px;
+      opacity: 0;
+    }
+  }
+  @keyframes scroll {
+    0% {
+      height: 0px;
+      opacity: 0;
+    }
+    10% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(15px);
+              transform: translateY(15px);
+      height: 88px;
+      opacity: 0;
+    }
+  }
   .title_bg .title_bg-split {
     display: block;
   }
@@ -538,16 +600,20 @@ footer .footer-title, footer .footer-info {
 }
 
 .modal-form .form-control {
-  border-radius: none !important;
+  border-radius: 0 !important;
   background: transparent !important;
   border: 0;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 0.3px solid #ffffff;
+  color: white;
 }
 
 .btn {
   outline: none;
-  border: 1px solid #000000;
   border-radius: 0;
+  border-top-color: #111111;
+  border-right-color: #111111;
+  border-bottom-color: #111111;
+  border-left-color: #111111;
 }
 
 .btn-empire {
@@ -580,6 +646,7 @@ footer .footer-title, footer .footer-info {
 *   Navigation Effects
 =================================*/
 .navbar {
+  background-color: transparent;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -618,5 +685,98 @@ footer .footer-title, footer .footer-info {
 
 .color-transparent {
   background-color: transparent;
+}
+
+/*===================================
+  * Owl Carousel
+  ===================================*/
+.owl-full .item {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.slider-overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slider-overlay .slider-title {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+}
+
+.slider-overlay .slider-title h1 {
+  font-size: 63px;
+  font-weight: 700;
+}
+
+.owl-item.active h1 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.owl-item.active h2 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.owl-item.active h4 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.owl-item.active .line {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.clickHold {
+  background: url(https://yodezeen.com/wp-content/uploads/2020/03/1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: white;
+}
+
+.owl-theme .owl-nav {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  background-color: orange;
 }
 /*# sourceMappingURL=style.css.map */

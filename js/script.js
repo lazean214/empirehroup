@@ -27,3 +27,75 @@ $(window).scroll(function() {
   });    
   
 }).scroll();
+
+
+// OWl Carousel
+$(document).ready(function() {
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    responsiveClass: true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true
+      },
+      600: {
+        items: 1,
+        nav: false
+      },
+      1000: {
+        items: 1,
+        nav: true,
+        loop: true,
+        margin: 20
+      }
+    }
+  })
+})
+
+
+// // Wrap every letter in a span
+// var textWrapper = document.querySelector('.ml6 .letters');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+// anime.timeline({loop: true})
+//   .add({
+//     targets: '.ml6 .letter',
+//     translateY: ["1.1em", 0],
+//     translateZ: 0,
+//     duration: 1000,
+//     delay: (el, i) => 50 * i
+//   }).add({
+//     targets: '.ml6',
+//     opacity: 0,
+//     duration: 2000,
+//     easing: "easeOutExpo",
+//     delay: 6000
+//   });
+
+
+//   AOS.init();
+
+
+// Press and Hold Event
+
+$(document).ready(function() {
+  
+  var i = 0, timeOut = 0;
+  
+  $('.owl-item').on('mousedown touchstart', function(e) {
+  
+    $('.slider-title h1').addClass('clickHold');
+    timeOut = setInterval(function(){
+      console.log(i++);
+    }, 100);
+  }).bind('mouseup mouseleave touchend', function() {
+    $('.slider-title h1').removeClass('clickHold');
+    clearInterval(timeOut);
+  });
+  
+});
