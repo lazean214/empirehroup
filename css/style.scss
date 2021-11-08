@@ -795,6 +795,28 @@ footer {
             }
         }
     }
+
+    .clickHold{
+        background: url(https://yodezeen.com/wp-content/uploads/2020/03/1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .slider-overlay-clicked {
+          background-color: rgba(255,255,255,1);
+          color: black;
+      
+          // h1 {
+          //     letter-spacing: 5px;
+          // }
+          h4 {
+              letter-spacing: 5px;
+          }
+      }
+      
 }
 
 
@@ -832,26 +854,6 @@ footer {
   }
 
 
-.clickHold{
-  background: url(https://yodezeen.com/wp-content/uploads/2020/03/1.jpg);
-  background-size: cover;
-  background-position: center;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.slider-overlay-clicked {
-    background-color: rgba(255,255,255,1);
-    color: black;
-
-    // h1 {
-    //     letter-spacing: 5px;
-    // }
-    h4 {
-        letter-spacing: 5px;
-    }
-}
 
 .owl-theme {
     .owl-nav {
