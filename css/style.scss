@@ -759,6 +759,7 @@ footer {
       position: relative;
       height: 100%;
       width: 100%;
+      transition: 0.2s;
       .slider-title {
           position: absolute;
           top: 50%;
@@ -768,11 +769,11 @@ footer {
           h1 {
               font-size: 63px;
               font-weight: 700;
-              transition: 0.5s;
+              transition: 0.3s;
           }
 
           h4 {
-              transition: 0.3s;
+              transition: 0.2s;
           }
       }
   }
