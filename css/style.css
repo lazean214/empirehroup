@@ -272,6 +272,8 @@ section {
     opacity: 1;
     background-size: 100%;
     background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.7);
   }
   .company_lists .company_list--item_bg:first-child {
     background-position: right;
@@ -708,15 +710,36 @@ footer .footer-title, footer .footer-info {
 
 .slider-overlay .slider-title {
   position: absolute;
-  top: 40%;
-  left: 20%;
-  -webkit-transform: translate(-50%, -20%);
-          transform: translate(-50%, -20%);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .slider-overlay .slider-title h1 {
   font-size: 63px;
   font-weight: 700;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider-overlay .slider-title h4 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .slider-overlay .slider-title {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    -webkit-transform: translate(-50%, -20%);
+            transform: translate(-50%, -20%);
+  }
+  .slider-overlay .slider-title h1 {
+    font-size: 63px;
+    font-weight: 700;
+  }
 }
 
 .owl-item.active h1 {
@@ -770,7 +793,15 @@ footer .footer-title, footer .footer-info {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.slider-overlay-clicked {
   background-color: white;
+  color: black;
+}
+
+.slider-overlay-clicked h4 {
+  letter-spacing: 5px;
 }
 
 .owl-theme .owl-nav {
@@ -778,5 +809,25 @@ footer .footer-title, footer .footer-info {
   bottom: 10%;
   right: 10%;
   background-color: orange;
+}
+
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
 }
 /*# sourceMappingURL=style.css.map */

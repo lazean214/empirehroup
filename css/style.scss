@@ -297,6 +297,8 @@ section {
             opacity: 1;
             background-size: 100%;
             background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            background-color: rgba(0,0,0, 0.7);
 
             &:first-child {
                 background-position: right;
@@ -747,8 +749,8 @@ footer {
           background-repeat: no-repeat;
           background-size: cover;
           background-blend-mode: multiply;
-        background-color: rgba(0,0,0, 0.7);
-        color: white;
+            background-color: rgba(0,0,0, 0.7);
+            color: white;
       }
   }
 
@@ -757,20 +759,42 @@ footer {
       position: relative;
       height: 100%;
       width: 100%;
-
       .slider-title {
           position: absolute;
-          top: 40%;
-          left: 20%;
-          transform: translate(-50%, -20%);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
 
           h1 {
               font-size: 63px;
               font-weight: 700;
+              transition: 0.5s;
+          }
+
+          h4 {
+              transition: 0.3s;
           }
       }
   }
 
+
+@media screen and (min-width: 768px) {
+    .slider-overlay {
+
+  
+        .slider-title {
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            transform: translate(-50%, -20%);
+  
+            h1 {
+                font-size: 63px;
+                font-weight: 700;
+            }
+        }
+    }
+}
 
 
 .owl-item.active h1 {
@@ -814,7 +838,18 @@ footer {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: white;
+}
+
+.slider-overlay-clicked {
+    background-color: rgba(255,255,255,1);
+    color: black;
+
+    // h1 {
+    //     letter-spacing: 5px;
+    // }
+    h4 {
+        letter-spacing: 5px;
+    }
 }
 
 .owl-theme {
@@ -828,3 +863,25 @@ footer {
     }
 }
 
+
+//TEXT ANIMATION
+
+.ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.3em;
+  }
+  
+  .ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }

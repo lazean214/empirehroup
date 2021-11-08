@@ -1,3 +1,5 @@
+
+
 $(window).scroll(function() {
   
   // selectors
@@ -32,12 +34,14 @@ $(window).scroll(function() {
 // OWl Carousel
 $(document).ready(function() {
   $('.owl-carousel').owlCarousel({
+    stagePadding: 0,
     loop: true,
-    margin: 10,
+    margin: 0,
     responsiveClass: true,
     autoplay:true,
     autoplayTimeout:5000,
     autoplayHoverPause:true,
+    animateOut: 'fadeOut',
     responsive: {
       0: {
         items: 1,
@@ -45,7 +49,7 @@ $(document).ready(function() {
       },
       600: {
         items: 1,
-        nav: false
+        nav: true
       },
       1000: {
         items: 1,
@@ -58,7 +62,7 @@ $(document).ready(function() {
 })
 
 
-// // Wrap every letter in a span
+// Wrap every letter in a span
 // var textWrapper = document.querySelector('.ml6 .letters');
 // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -90,12 +94,20 @@ $(document).ready(function() {
   $('.owl-item').on('mousedown touchstart', function(e) {
   
     $('.slider-title h1').addClass('clickHold');
+
+    $('.slider-overlay').addClass('slider-overlay-clicked');
+
+
     timeOut = setInterval(function(){
       console.log(i++);
     }, 100);
+
   }).bind('mouseup mouseleave touchend', function() {
     $('.slider-title h1').removeClass('clickHold');
+    $('.slider-overlay').removeClass('slider-overlay-clicked');
+
     clearInterval(timeOut);
   });
   
 });
+
