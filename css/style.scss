@@ -69,17 +69,6 @@ p {
   }
 
 
-//   .carousel-item {
-//     height: 100vh;
-//     min-height: 350px;
-//     background: no-repeat center center scroll;
-//     -webkit-background-size: cover;
-//     -moz-background-size: cover;
-//     -o-background-size: cover;
-//     background-size: cover;
-//   }
-
-
 section {
     position: relative;
 }
@@ -771,13 +760,14 @@ footer {
           transform: translate(-50%, -50%);
 
           h1 {
-              font-size: 63px;
+              font-size: 30px;
               font-weight: 700;
               transition: 0.3s;
           }
 
           h4 {
               transition: 0.5s;
+              font-size: 16px;
           }
       }
   }
