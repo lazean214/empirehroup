@@ -714,8 +714,21 @@ footer .footer-title, footer .footer-info {
   color: white;
 }
 
+.video-overlay {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-overlay video {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .slider-overlay {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   -webkit-transition: 0.2s;

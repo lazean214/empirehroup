@@ -763,12 +763,20 @@ footer {
       }
   }
 
-.owl-theme {
-
+.video-overlay {
+    
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    video {
+        transform: scale(1.2);
+    }
 }
 
   .slider-overlay {
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
       height: 100%;
       width: 100%;
       transition: 0.2s;
@@ -790,6 +798,8 @@ footer {
           }
       }
   }
+
+
 
 
 @media screen and (min-width: 768px) {
