@@ -540,7 +540,7 @@ footer .footer-title, footer .footer-info {
 /* colours */
 .color-white {
   background-color: #ffffff;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
 .color-white a {
@@ -549,11 +549,101 @@ footer .footer-title, footer .footer-info {
 
 .color-black {
   background-color: #111111;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.8);
+}
+
+.color-black a {
+  color: white !important;
 }
 
 .color-transparent {
   background-color: transparent;
+}
+
+.page-header {
+  margin-top: 3rem;
+}
+
+.page-title_bg {
+  position: relative;
+}
+
+.page-title_bg .page-title_bg-split {
+  display: none;
+}
+
+.white-spacer {
+  height: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    margin-top: 3rem;
+  }
+  .page-title_bg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    -webkit-transform: translate(-50%, -10%);
+            transform: translate(-50%, -10%);
+    z-index: 1;
+    opacity: .02;
+    width: 100%;
+    color: #000000;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .page-title_bg::before {
+    content: "";
+    margin-left: 2rem;
+  }
+  .page-title_bg::after {
+    content: "";
+    margin-right: 2rem;
+  }
+  .page-title_bg .page-title_bg-split {
+    display: block;
+  }
+  .page-title_bg .line {
+    display: inline-block;
+    font-size: 185px;
+    padding: 0 10px;
+    font-weight: 700;
+  }
+  h2 {
+    font-weight: 700;
+  }
+  .page-content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .page-content .container {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .page-title_bg .line {
+    font-size: 200px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .page-title_bg .line {
+    font-size: 250px;
+    letter-spacing: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-title_bg .line {
+    font-size: 320px;
+    letter-spacing: 0;
+  }
 }
 
 body {
@@ -672,45 +762,6 @@ section {
 .title_bg .title_bg-split .line {
   display: inline-block;
   font-size: 90px;
-  padding: 0 10px;
-  font-weight: 700;
-}
-
-.page-title_bg {
-  position: relative;
-}
-
-.page-title_bg .page-title_bg-split {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  -webkit-transform: translate(-50%, -20%);
-          transform: translate(-50%, -20%);
-  z-index: 1;
-  opacity: .02;
-  width: 100%;
-  color: #000000;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.page-title_bg .page-title_bg-split::before {
-  content: "";
-  margin-left: 2rem;
-}
-
-.page-title_bg .page-title_bg-split::after {
-  content: "";
-  margin-right: 2rem;
-}
-
-.page-title_bg .page-title_bg-split .line {
-  display: inline-block;
-  font-size: 200px;
   padding: 0 10px;
   font-weight: 700;
 }

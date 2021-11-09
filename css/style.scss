@@ -4,6 +4,7 @@
 
 @import "carousel";
 @import "landing";
+@import "page";
 
 body {
     font-family: 'Barlow', sans-serif;
@@ -124,40 +125,7 @@ section {
     }
 }
 
-.page-title_bg {
 
-    position: relative;
-
-    .page-title_bg-split {
-        display: flex;
-        position: absolute;
-        left: 50%;
-        top: 20%;
-        transform: translate(-50%, -20%);
-        z-index: 1;
-        opacity: .02;
-        width: 100%;
-        color: #000000;
-        justify-content: space-between;
-
-        &::before {
-            content: "";
-            margin-left: 2rem;
-        }
-
-        &::after {
-            content: "";
-            margin-right: 2rem;
-        }
-        .line {
-            display: inline-block;
-            font-size: 200px;
-            padding: 0 10px;
-            font-weight: 700;
-            
-        }
-    }
-}
 
 .about, .career {
     h2 {

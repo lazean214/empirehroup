@@ -15,14 +15,15 @@
 <body>
 
   <div class="page-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top color-transparent">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">LOGO HERE</a>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
@@ -30,13 +31,16 @@
               <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Dropdown
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
@@ -44,15 +48,29 @@
               <a class="nav-link disabled">Disabled</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
+  
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <div class="position-absolute top-50 start-50 translate-middle">
+            <ul class="offcanvasmenu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="page.html">Page</a></li>
+            </ul>
+          </div>
+        
+      </div>
+    </div>
+    
 
-    <section>
+    <div class="white-spacer section" data-color="transparent"></div>
+    <div class="page-header section" data-color="transparent">
       <div class="page-title_bg">
         <div class="page-title_bg-split">
           <div class="line wow fadeInUp">A</div>
@@ -63,23 +81,61 @@
         </div>
       </div>
 
-      <div class="container py-4 px-4 px-mg-5">
-        <div class="row">
-          <div class="col-md-6">
-            <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+      <div class="page-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 col-lg-6">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique non, animi aliquid ipsam eos vel impedit nesciunt repellat odio libero dolor, laboriosam delectus? Unde culpa eveniet dolores consectetur, libero molestiae.</p></p>
-          </div>
-          <div class="col-md-12 col-lg-6">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique non, animi aliquid ipsam eos vel impedit nesciunt repellat odio libero dolor, laboriosam delectus? Unde culpa eveniet dolores consectetur, libero molestiae.</p></p>
+          <div class="row">
+            <div class="col-md-12 col-lg-6">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique non, animi aliquid ipsam eos vel impedit nesciunt repellat odio libero dolor, laboriosam delectus? Unde culpa eveniet dolores consectetur, libero molestiae.</p></p>
+            </div>
+            <div class="col-md-12 col-lg-6">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique non, animi aliquid ipsam eos vel impedit nesciunt repellat odio libero dolor, laboriosam delectus? Unde culpa eveniet dolores consectetur, libero molestiae.</p></p>
+            </div>
           </div>
         </div>
       </div>
+      
+    </div>
+
+    <div class="section" data-color="black"> 
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <img src="https://via.placeholder.com/1080x600" class="w-100" alt="">
+            </div>
+          </div>
+      </div>
+    </div> 
+    <section class="bg-light section" data-color="white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quasi veniam. Illum accusamus deserunt ut? Voluptates eius at quae dignissimos ut provident? Iste, commodi quae! Magnam voluptas animi quasi placeat.</p>
+            </div>            
+            <div class="col-lg-6">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quasi veniam. Illum accusamus deserunt ut? Voluptates eius at quae dignissimos ut provident? Iste, commodi quae! Magnam voluptas animi quasi placeat.</p>
+            </div>    
+        </div>
+      </div>
     </section>
-  </div>
+      <section class="section bg-dark" data-color="black">
+        libero
+      </section>
+
+      <section class="section bg-light" data-color="white">
+        libero
+      </section>
+
+  </div> <!-- End of Wrapper-->
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
