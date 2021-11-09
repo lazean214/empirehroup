@@ -3,7 +3,8 @@
 body {
   font-family: 'Barlow', sans-serif;
   font-weight: 100;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
 
 p {
@@ -70,6 +71,9 @@ button:focus {
   }
 }
 
+/*=============================
+*           SECTION
+==============================*/
 section {
   position: relative;
   min-height: 100vh;
@@ -99,6 +103,15 @@ section {
   font-size: 90px;
   padding: 0 10px;
   font-weight: 700;
+}
+
+.about h2, .career h2 {
+  color: #111111 !important;
+}
+
+.about p, .career p {
+  color: #111111 !important;
+  opacity: 0.6;
 }
 
 /*========================
@@ -735,8 +748,8 @@ footer .footer-title, footer .footer-info {
     position: absolute;
     top: 40%;
     left: 20%;
-    -webkit-transform: translate(-50%, -20%);
-            transform: translate(-50%, -20%);
+    -webkit-transform: translate(-50%, 20%);
+            transform: translate(-50%, 20%);
   }
   .slider-overlay .slider-title h1 {
     font-size: 63px;

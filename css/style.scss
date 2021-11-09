@@ -5,7 +5,8 @@
 body {
     font-family: 'Barlow', sans-serif;
     font-weight: 100;
-    letter-spacing: 2px
+    letter-spacing: 1px;
+    font-size: 14px;
   }
   
 p {
@@ -69,6 +70,10 @@ p {
   }
 
 
+/*=============================
+*           SECTION
+==============================*/
+
 section {
     position: relative;
     min-height: 100vh;
@@ -97,6 +102,16 @@ section {
             font-weight: 700;
             
         }
+    }
+}
+
+.about, .career {
+    h2 {
+        color: #111111 !important;
+    }
+    p {
+        color: #111111 !important;
+        opacity: 0.6;
     }
 }
 
@@ -777,13 +792,12 @@ footer {
 @media screen and (min-width: 768px) {
     .slider-overlay {
 
-  
         .slider-title {
             position: absolute;
             top: 40%;
             left: 20%;
-            transform: translate(-50%, -20%);
-  
+            transform: translate(-50%, 20%);
+            
             h1 {
                 font-size: 63px;
                 font-weight: 700;
@@ -805,9 +819,6 @@ footer {
           background-color: rgba(255,255,255,1);
           color: black;
       
-          // h1 {
-          //     letter-spacing: 5px;
-          // }
           h4 {
             
               letter-spacing: 5px;
