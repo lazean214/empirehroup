@@ -724,10 +724,8 @@ footer .footer-title, footer .footer-info {
 
 .slider-overlay .slider-title {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 12%;
+  left: 10%;
 }
 
 .slider-overlay .slider-title h1 {
@@ -825,8 +823,8 @@ footer .footer-title, footer .footer-info {
 
 .owl-theme .owl-dots {
   position: absolute;
-  bottom: 10%;
-  right: 10%;
+  bottom: 5%;
+  right: 5%;
 }
 
 .owl-theme .owl-dots .owl-dot {

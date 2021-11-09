@@ -763,6 +763,9 @@ footer {
       }
   }
 
+.owl-theme {
+
+}
 
   .slider-overlay {
       position: relative;
@@ -771,9 +774,9 @@ footer {
       transition: 0.2s;
       .slider-title {
           position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          top: 12%;
+          left: 10%;
+        //   transform: translate(-10%, -10%);
 
           h1 {
               font-size: 30px;
@@ -820,9 +823,7 @@ footer {
           color: black;
       
           h4 {
-            
               letter-spacing: 5px;
-           
           }
       }
       
@@ -876,8 +877,8 @@ footer {
 
     .owl-dots {
         position: absolute;
-        bottom: 10%;
-        right: 10%;
+        bottom: 5%;
+        right: 5%;
 
         
     }
