@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700&display=swap");
 body {
-  font-family: 'Advent Pro', sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-weight: 100;
   letter-spacing: 2px;
 }
@@ -67,13 +68,6 @@ button:focus {
     top: 15px;
     right: 35px;
   }
-}
-
-.carousel-item {
-  height: 100vh;
-  min-height: 350px;
-  background: no-repeat center center scroll;
-  background-size: cover;
 }
 
 section {
@@ -730,8 +724,8 @@ footer .footer-title, footer .footer-info {
 }
 
 .slider-overlay .slider-title h4 {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
@@ -812,6 +806,36 @@ footer .footer-title, footer .footer-info {
   bottom: 10%;
   right: 10%;
   background-color: orange;
+}
+
+.owl-theme .owl-dots {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  margin: 0px 5px;
+}
+
+.owl-theme .owl-dots .owl-dot button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.6;
+  text-align: left;
+}
+
+.owl-theme .owl-dots .owl-dot button:focus {
+  outline: none;
+}
+
+.owl-theme .owl-dots .owl-dot.active button {
+  color: #ffffff;
+  opacity: 1;
 }
 
 .ml6 {

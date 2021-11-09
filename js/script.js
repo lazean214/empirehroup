@@ -42,18 +42,19 @@ $(document).ready(function() {
     autoplayTimeout:5000,
     autoplayHoverPause:true,
     animateOut: 'fadeOut',
+    dotsData: true,
     responsive: {
       0: {
         items: 1,
-        nav: true
+        nav: false
       },
       600: {
         items: 1,
-        nav: true
+        nav: false
       },
       1000: {
         items: 1,
-        nav: true,
+        nav: false,
         loop: true,
         margin: 20
       }

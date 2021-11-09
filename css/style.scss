@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700&display=swap');
+
 body {
-    font-family: 'Advent Pro', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-weight: 100;
     letter-spacing: 2px
   }
@@ -67,15 +69,15 @@ p {
   }
 
 
-  .carousel-item {
-    height: 100vh;
-    min-height: 350px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+//   .carousel-item {
+//     height: 100vh;
+//     min-height: 350px;
+//     background: no-repeat center center scroll;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+//   }
 
 
 section {
@@ -685,6 +687,7 @@ footer {
     color: #000000;
     letter-spacing: 2px;
     outline: 0;
+
     transition: background-color 1s;
     &:hover {
         color: white;
@@ -700,8 +703,6 @@ footer {
         }
     }
 }
-
-
 
 /*=================================
 *   Navigation Effects
@@ -776,7 +777,7 @@ footer {
           }
 
           h4 {
-              transition: 0.2s;
+              transition: 0.5s;
           }
       }
   }
@@ -796,6 +797,7 @@ footer {
                 font-size: 63px;
                 font-weight: 700;
             }
+
         }
     }
 
@@ -816,7 +818,9 @@ footer {
           //     letter-spacing: 5px;
           // }
           h4 {
+            
               letter-spacing: 5px;
+           
           }
       }
       
@@ -867,6 +871,39 @@ footer {
 
        
     }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+
+        
+    }
+
+    .owl-dots .owl-dot {
+        margin: 0px 5px;
+      }
+      .owl-dots .owl-dot button {
+        background: none;
+        border: none;
+        padding: 0;
+        color: #ffffff;
+        font-size: 14px;
+        // font-weight: bold;
+        cursor: pointer;
+        opacity: 0.6;
+        text-align: left;
+      }
+      .owl-dots .owl-dot button:focus {
+        outline: none;
+      }
+      .owl-dots .owl-dot.active button {
+        color: #ffffff;
+        opacity: 1;
+      }
+      
+
+
 }
 
 
