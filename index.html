@@ -12,48 +12,7 @@
   <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <style type="text/css">
-    div.clickEffect {
-      position: fixed;
-      box-sizing: border-box;
-      border-style: solid;
-      border-color: #000000;
-      border-radius: 50%;
-      animation: clickEffect 0.4s ease-out;
-      z-index: 99999;
-    }
-
-    @keyframes clickEffect {
-      0% {
-        opacity: 1;
-        width: 0.5em;
-        height: 0.5em;
-        margin: -0.25em;
-        border-width: 0.5rem;
-      }
-
-      100% {
-        opacity: 0.2;
-        width: 15em;
-        height: 15em;
-        margin: -7.5em;
-        border-width: 0.03rem;
-      }
-    }
-  </style>
-  <script type="text/javascript">
-    function clickEffect(e) {
-      var d = document.createElement("div");
-      d.className = "clickEffect";
-      d.style.top = e.clientY + "px";
-      d.style.left = e.clientX + "px";
-      document.body.appendChild(d);
-      d.addEventListener('animationend', function () {
-        d.parentElement.removeChild(d);
-      }.bind(this));
-    }
-    document.addEventListener('click', clickEffect);
-  </script>
+ 
 </head>
 
 <body>
@@ -61,7 +20,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top color-transparent">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">LOGO HERE</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -94,15 +53,33 @@
       </div>
     </div>
   </nav>
-  
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="position-absolute top-50 start-50 translate-middle">
+          <ul class="offcanvasmenu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="page.html">HOME</a></li>
+          </ul>
+        </div>
+      
+    </div>
+  </div>
+
   <div class="section" data-color="transparent"></div>
 
   <section id="hero" class="section" data-color="transparent">
     <div class="slider">
       <div class="owl-carousel owl-theme owl-full">
-        <div class="item" style="background-image: url(assets/img/1.jpeg) ;" data-dot="<button>01 <br>Real Estate</button>">
+        <div class="item" style="background-image: url(assets/img/1.jpeg) ;"
+          data-dot="<button>01 <br>Real Estate</button>">
           <div class="video-overlay">
-            <video class="poster__video" src="https://yodezeen.com/wp-content/uploads/2021/09/1_3.mp4" autoplay="" loop="" muted="" playsinline=""></video>
+            <video class="poster__video" src="https://yodezeen.com/wp-content/uploads/2021/09/1_3.mp4" autoplay=""
+              loop="" muted="" playsinline=""></video>
           </div>
           <div class="slider-overlay">
             <div class="slider-title">
@@ -112,7 +89,8 @@
           </div>
 
         </div>
-        <div class="item" style="background-image: url(assets/img/2.jpeg);" data-dot="<button>02 <br> Construction</button>">
+        <div class="item" style="background-image: url(assets/img/2.jpeg);"
+          data-dot="<button>02 <br> Construction</button>">
           <div class="slider-overlay">
             <div class="slider-title">
               <h1>Construction</h1>
@@ -120,7 +98,8 @@
             </div>
           </div>
         </div>
-        <div class="item" style="background-image: url(assets/img/3.jpeg);" data-dot="<button>03 <br> Interior Design</button>"> 
+        <div class="item" style="background-image: url(assets/img/3.jpeg);"
+          data-dot="<button>03 <br> Interior Design</button>">
           <div class="slider-overlay">
             <div class="slider-title">
               <h1>Design</h1>
@@ -149,21 +128,22 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h2 class="wow fadeInUp" data-wow-delay="0.1s">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+            <h2 class="wow fadeInUp" data-wow-delay="0.3s">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 col-lg-6 wow fadeInUp">
+        <div class="row wow fadeInUp">
+          <div class="col-md-12 col-lg-6 ">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ea totam molestiae error eum laboriosam
               odio rerum aperiam, eligendi obcaecati repellendus. Et neque quia ratione officia! Iste dolores distinctio
               quae?</p>
           </div>
-          <div class="col-md-12 col-lg-6 wow fadeInUp">
+          <div class="col-md-12 col-lg-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ea totam molestiae error eum laboriosam
               odio rerum aperiam, eligendi obcaecati repellendus. Et neque quia ratione officia! Iste dolores distinctio
               quae?</p>
           </div>
-          <div class="col-md-12 col-lg-6 wow fadeInUp">
+          <div class="col-md-12 col-lg-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ea totam molestiae error eum laboriosam
               odio rerum aperiam, eligendi obcaecati repellendus. Et neque quia ratione officia! Iste dolores distinctio
               quae?</p>
@@ -242,11 +222,11 @@
 
       <div class="container">
         <div class="col-md-12 offset-lg-6 col-lg-6 ">
-          <h2 class="wow fadeInUp" data-wow-delay="0.1s">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
-          <p class="wow fadeInUp" data-wow-delay="0.2s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ea
+          <h2 class="wow fadeInUp" data-wow-delay="0.3s">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+          <p class="wow fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ea
             totam molestiae error eum laboriosam odio rerum aperiam, eligendi obcaecati repellendus. Et neque quia
             ratione officia! Iste dolores distinctio quae?</p>
-          <p class="wow fadeInUp" data-wow-delay="0.2s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ea
+          <p class="wow fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ea
             totam molestiae error eum laboriosam odio rerum aperiam, eligendi obcaecati repellendus. Et neque quia
             ratione officia! Iste dolores distinctio quae?</p>
 

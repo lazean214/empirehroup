@@ -1,89 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <style>
-    body {
-      margin: 0; /* Remove html default margin */
-    }
-
-    header {
-      height: 100vh; /* Set the height to fullscreen of the device*/
-      background-image: url(https://images.unsplash.com/photo-1632227891949-23c8597a9aea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80);
-      background-position: center;
-      background-size: cover;
-      background-blend-mode: multiply;
-      background-color: rgba(0,0,0,0.5);
-    }
-
-    nav {
-      position: relative;
-      padding: 1rem;
-    }
-
-    .logo {
-      float: left; /* Position the logo o the left side of the page */
-      color: white;
-      font-size: 25px;
-      text-shadow: 0 2px 2px black;
-    }
-
-    .top-navigation {
-      float: right; /* Position the navigation to the right side of the page */
-    }
-
-    ul {
-      margin: 0; /* Reset default styling of UL*/
-    }
-
-    ul li {
-      list-style-type: none; /* Remove circle */
-      display: inline-block; /* Make a single line list*/
-      padding: 0 1rem; /* padding top & bottom is set to zero and left & right to 1rem / 16px*/
-    }
-
-    ul li a {
-      color: white;
-      text-decoration: none; /* Remove default text underline for anchortag*/
-    }
-
-    .header-text {
-      position: absolute; /* assign Position the element to absolute*/
-      top: 50%; /* from top 50% down */
-      left: 50%; /* form left to right */
-      transform: translate(-50%, -50%); /* center / middle the element contents for absolute centering*/
-      color: white;
-      text-shadow: 0 2px 2px black;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+ 
 </head>
-<body>
-  
-<header>
-    <nav>
-      <div class="logo">My LOGO</div>
 
-      <div class="top-navigation">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+<body>
+
+  <div class="page-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
     </nav>
 
-    <div class="header-text">
-      <h1>This is my Header</h1>
-    </div>
-</header>
+    <section>
+      <div class="page-title_bg">
+        <div class="page-title_bg-split">
+          <div class="line wow fadeInUp">A</div>
+          <div class="line wow fadeInUp" data-wow-delay="0.3s">B</div>
+          <div class="line wow fadeInUp" data-wow-delay="0.5s">O</div>
+          <div class="line wow fadeInUp" data-wow-delay="0.7s">U</div>
+          <div class="line wow fadeInUp" data-wow-delay="0.9s">T</div>
+        </div>
+      </div>
 
-<section></section>
+      <div class="container py-4 px-4 px-mg-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique non, animi aliquid ipsam eos vel impedit nesciunt repellat odio libero dolor, laboriosam delectus? Unde culpa eveniet dolores consectetur, libero molestiae.</p></p>
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique non, animi aliquid ipsam eos vel impedit nesciunt repellat odio libero dolor, laboriosam delectus? Unde culpa eveniet dolores consectetur, libero molestiae.</p></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-<footer></footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    wow = new WOW({
+      animateClass: 'animated',
+      offset: 100,
+      callback: function (box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      }
+    });
+    wow.init();
+  </script>
 
 </body>
+
 </html>

@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700&display=swap');
 
+@import "carousel";
+@import "landing";
+
 body {
     font-family: 'Barlow', sans-serif;
     font-weight: 100;
@@ -11,6 +14,22 @@ body {
   
 p {
     line-height: 1.5rem;
+}
+
+
+.offcanvas-start {
+    width: 100%;
+    background-color: #111111;
+}
+
+.offcanvasmenu li {
+    list-style-type: none;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 #hero {
@@ -105,6 +124,41 @@ section {
     }
 }
 
+.page-title_bg {
+
+    position: relative;
+
+    .page-title_bg-split {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -20%);
+        z-index: 1;
+        opacity: .02;
+        width: 100%;
+        color: #000000;
+        justify-content: space-between;
+
+        &::before {
+            content: "";
+            margin-left: 2rem;
+        }
+
+        &::after {
+            content: "";
+            margin-right: 2rem;
+        }
+        .line {
+            display: inline-block;
+            font-size: 200px;
+            padding: 0 10px;
+            font-weight: 700;
+            
+        }
+    }
+}
+
 .about, .career {
     h2 {
         color: #111111 !important;
@@ -134,421 +188,6 @@ section {
         width: 900px;
     }
 }
-
-
-
-/*=============================
-*           Company Lists
-==============================*/
-
-.company_bg {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 100%;
-    min-height: 200px;
-    background-position: center;
-    transition: 1s;
-    background-blend-mode: multiply;
-    background-color: rgba(0,0,0, 0.7);
-}
-
-.carousel-item {
-    img {
-        width: 100%;
-    }
-}
-
-
-
-
-.company {
-    margin: 0;
-}
-
-.company_lists {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-
-    .company_list--item{
-        display: block;
-        width: 100%;
-        height: calc(100% / 3);
-        position: relative;
-    }
-
-    .card_mask {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        // background-color: rgba(0,0,0,0.7);
-        z-index: 2;
-    }
-
-    .company_list--info {
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        z-index: 3;
-        transform: translate(0, -50%);
-        color: white;
-
-        h2 {
-            font-weight: 700;
-        }
-
-        h5 {
-            font-weight: 100;
-            font-size: 12px;
-            text-transform: uppercase;
-        }
-    }
-}
-
-
-@media screen and (min-width: 1200px) {
-    h2 {
-        font-weight: 700;
-    }
-    .title_bg {
-        height: 100vh;
-    }
-
-    .title_bg-split {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-
-        .line {
-            font-size: 300px !important;
-            margin: 0 20PX;
-        }
-    }
-    .wrapper {
-        padding: 150px;
-    }   
-
-    .company__inner {
-        position: relative;
-        height: 100vh;
-    }
-    .company_bg  {
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        opacity: 0;
-        -webkit-transition: opacity 0.5s ease;
-            -o-transition: opacity 0.5s ease;
-            transition: opacity 0.5s ease;
-
-        
-    }
-    .company_img_active {
-        opacity: 1;
-        transition: 0.5s;
-    }
-
-
-    .company_lists {
-        font-size: 0;
-        letter-spacing: 0;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        height: 100%;
-        padding-left: 0;
-        padding-right: 0;
-
-        // display: flex;
-        .company_list--item {
-            display: inline-block;
-            width: calc(100% / 3);
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            background-position: center;
-            background-size: cover;
-            
-            &:first-child {
-                border-right: 0.5px solid rgba(255,255,255,0.3);
-            }
-            &:last-child {
-                border-left: 0.5px solid rgba(255,255,255,0.3);
-            }
-
-            &:hover {
-                transition: 2s;
-            }
-
-        }
-
-        .company_list--item_bg {
-            // position: absolute;
-            top: 0;
-            left: 0;
-            width: 300%;
-            height: 100%;
-            z-index: -2;
-            -webkit-transition: opacity 1s ease;
-            -o-transition: opacity 1s ease;
-            transition: opacity 1s ease;
-            overflow: hidden;
-            opacity: 1;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-blend-mode: multiply;
-            background-color: rgba(0,0,0, 0.7);
-
-            &:first-child {
-                background-position: right;
-            }
-
-            &:nth-child(1){
-                background-position: center;
-            }
-
-            &:last-child {
-                background-position: right;
-            }
-        }
-        
-
-        .company_list--info {
-            width: 100%;
-            text-align: center;
-            color: #fff;
-            min-height: 62px;
-            -webkit-transition: opacity 0.5s ease;
-            -o-transition: opacity 0.5s ease;
-            transition: opacity 0.5s ease;
-            position: absolute;
-            top: calc(50% - 16px);
-            left: 0;
-            padding: 0 30px;
-        }
-    }
-
-    .company_list--item:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: calc((100% / 3) * 2);
-        width: 1px;
-        height: 100%;
-        background-color: rgba(255,255,255,0);
-        z-index: 3;
-        -webkit-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-    }
-
-    .company_list--item:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: calc(100% / 3);
-        width: 1px;
-        height: 100%;
-        background-color: rgba(255,255,255,0);
-        z-index: 3;
-        -webkit-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-    }
-}
-
-
-
-
-
-
-/*=============================
-*           Footer
-==============================*/
-footer {
-    background-color: #111111;
-    color: white;
-    display: block;
-
-    .footer_content {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        border-bottom: 1px solid #303030;
-        margin-bottom: 3rem;
-
-        h5 {
-            font-size: 12px;
-            color: #303030;
-        }
-
-        .footer-info {
-            font-size: 12px;
-            color: white;
-        }
-    }
-
-    .header-split {
-        font-size: 30px;
-        font-weight: 400;
-        letter-spacing: 0;
-    }
-
-    .footer__maps {
-        background-color: #111111;
-        .cssmap-container {
-            position: absolute;
-            right: 0;
-            opacity: 0.1;
-            pointer-events: none;
-        }
-        overflow: hidden;
-        #demo-markers {
-            display: none;
-        }
-    }
-
-    .footer_copy {
-     
-        background: linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0.9) 70%,  rgba(17,17,17,0) 100%);
-        font-size: 12px;
-        letter-spacing: 2px;
-        h4 {
-            font-size: 12px;
-            text-transform: uppercase;
-        }
-
-        h5 {
-            font-size: 12px;
-            color: #303030;
-        }
-
-        .footer-info {
-            font-size: 12px;
-            color: white;
-        }
-    }
-
-    .footer-title, .footer-info {
-        cursor: pointer;
-    }
-    
-}
-
-@media screen and (min-width: 548px){
-    .cssmap-650 .continents {
-        height: 100px;
-        overflow: hidden;
-    }
-}   
-
-@media screen and (max-width: 767px) {
-
-    .footer {
-        position: relative;
-        .footer__maps {
-            position: relative;
-            height: 200px;
-            overflow: hidden !important; 
-            .cssmap-container {
-                position: absolute;
-                right: 0;
-                opacity: 0.1;
-                pointer-events: none;
-            }
-            overflow: hidden;
-           
-        }
-
-        
-    }
-    
-    .cssmap-650 .continents {
-        height: 174px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    footer {
-        padding: 3rem;
-        position: relative;
-
-        .footer__maps {
-            display: block;
-            .cssmap-container {
-                position: relative;
-                pointer-events: inherit;
-                opacity: 1;
-            }
-            #demo-markers {
-                display: block;
-            }
-        }
-
-        .footer_copy {
-            width: 100%;
-            background: linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0.9) 70%,  rgba(17,17,17,0) 100%);
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            z-index: 5;
-        }
-
-        .footer_content {
-            border-bottom: transparent;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-
-        
-
-        
-    }
-    
-}
-
-
-
-.btn-empire {
-    stroke-dasharray: 0 620;
-    stroke-dashoffset: 0;
-    stroke-width: 1px;
-    fill: transparent;
-    stroke: #000;
-    -webkit-transition: stroke-dasharray 1.5s linear;
-    -o-transition: stroke-dasharray 1.5s linear;
-    transition: stroke-dasharray 1.5s linear;
-}
-
-
-
-
-/*=============================
-*           Career
-==============================*/
-
-.career_title {
-    font-weight: 700;
-    letter-spacing: 0;
-}
-
-.career_position {
-    letter-spacing: 1px;
-}
-
-// .container {
-//     min-width: 100%;
-// }
 
 /*=================================
 =       Standard Screen Override
@@ -709,215 +348,6 @@ footer {
     }
 }
 
-/*=================================
-*   Navigation Effects
-=================================*/
-
-.navbar {
-    background-color: transparent;
-    transition: 0.5s;
-}
-/* panel styles */
-.panel {
-    /* min height incase content is higher than window height */
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: sans-serif;
-    /* outline: 10px solid hotpink; */
-    /* turn above on to see the edge of panels */
-  }
-  
-  /* colours */
-  .color-white {
-    background-color: #ffffff;
-    border-bottom: 0.5px solid rgba(0,0,0,0.3);
-     a {
-         color: black !important;
-     }
-  }
-  .color-black {
-    background-color: #111111;
-    border-bottom: 0.5px solid rgba(255,255,255,0.3);
-  }
-
-
-  .color-transparent {
-      background-color: transparent;
-  }
-
-
-  /*===================================
-  * Owl Carousel
-  ===================================*/
-  .owl-full{
-      .item {
-          height: 100vh;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-blend-mode: multiply;
-            background-color: rgba(0,0,0, 0.7);
-            color: white;
-      }
-  }
-
-.video-overlay {
-    
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    video {
-        transform: scale(1.2);
-    }
-}
-
-  .slider-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      transition: 0.2s;
-      .slider-title {
-          position: absolute;
-          top: 12%;
-          left: 10%;
-        //   transform: translate(-10%, -10%);
-
-          h1 {
-              font-size: 30px;
-              font-weight: 700;
-              transition: 0.3s;
-          }
-
-          h4 {
-              transition: 0.5s;
-              font-size: 16px;
-          }
-      }
-  }
-
-
-
-
-@media screen and (min-width: 768px) {
-    .slider-overlay {
-
-        .slider-title {
-            position: absolute;
-            top: 40%;
-            left: 20%;
-            transform: translate(-50%, 20%);
-            
-            h1 {
-                font-size: 63px;
-                font-weight: 700;
-            }
-
-        }
-    }
-
-    .clickHold{
-        background: url(https://yodezeen.com/wp-content/uploads/2020/03/1.jpg);
-        background-size: cover;
-        background-position: center;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      
-      .slider-overlay-clicked {
-          background-color: rgba(255,255,255,1);
-          color: black;
-      
-          h4 {
-              letter-spacing: 5px;
-          }
-      }
-      
-}
-
-
-.owl-item.active h1 {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    animation-name: fadeInDown;
-    animation-delay: 0.3s;
-  }
-.owl-item.active h2 {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    animation-name: fadeInDown;
-    animation-delay: 0.3s;
-  }
-.owl-item.active h4 {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    animation-name: fadeInUp;
-    animation-delay: 0.3s;
-  }
-.owl-item.active .line {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    animation-name: fadeInLeft;
-    animation-delay: 0.3s;
-  }
-
-
-
-.owl-theme {
-    .owl-nav {
-        position: absolute;
-        bottom: 10%;
-        right: 10%;
-        background-color: orange;
-
-       
-    }
-
-    .owl-dots {
-        position: absolute;
-        bottom: 5%;
-        right: 5%;
-
-        
-    }
-
-    .owl-dots .owl-dot {
-        margin: 0px 5px;
-      }
-      .owl-dots .owl-dot button {
-        background: none;
-        border: none;
-        padding: 0;
-        color: #ffffff;
-        font-size: 14px;
-        // font-weight: bold;
-        cursor: pointer;
-        opacity: 0.6;
-        text-align: left;
-      }
-      .owl-dots .owl-dot button:focus {
-        outline: none;
-      }
-      .owl-dots .owl-dot.active button {
-        color: #ffffff;
-        opacity: 1;
-      }
-      
-
-
-}
 
 
 //TEXT ANIMATION
@@ -940,4 +370,36 @@ footer {
   .ml6 .letter {
     display: inline-block;
     line-height: 1em;
+  }
+
+
+  /*
+  CLick EFFECT
+  */
+  div.clickEffect {
+    position: fixed;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 50%;
+    animation: clickEffect 0.4s ease-out;
+    z-index: 99999;
+  }
+
+  @keyframes clickEffect {
+    0% {
+      opacity: 1;
+      width: 0.5em;
+      height: 0.5em;
+      margin: -0.25em;
+      border-width: 0.5rem;
+    }
+
+    100% {
+      opacity: 0.2;
+      width: 15em;
+      height: 15em;
+      margin: -7.5em;
+      border-width: 0.03rem;
+    }
   }
