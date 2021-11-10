@@ -164,140 +164,6 @@
 }
 
 /*=============================
-*           Footer
-==============================*/
-footer {
-  background-color: #111111;
-  color: white;
-  display: block;
-}
-
-footer .footer_content {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid #303030;
-  margin-bottom: 3rem;
-}
-
-footer .footer_content h5 {
-  font-size: 12px;
-  color: #303030;
-}
-
-footer .footer_content .footer-info {
-  font-size: 12px;
-  color: white;
-}
-
-footer .header-split {
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-footer .footer__maps {
-  background-color: #111111;
-  overflow: hidden;
-}
-
-footer .footer__maps .cssmap-container {
-  position: absolute;
-  right: 0;
-  opacity: 0.1;
-  pointer-events: none;
-}
-
-footer .footer__maps #demo-markers {
-  display: none;
-}
-
-footer .footer_copy {
-  background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(50%, #111111), color-stop(70%, rgba(17, 17, 17, 0.9)), to(rgba(17, 17, 17, 0)));
-  background: linear-gradient(to top, #111111 0%, #111111 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-
-footer .footer_copy h4 {
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-footer .footer_copy h5 {
-  font-size: 12px;
-  color: #303030;
-}
-
-footer .footer_copy .footer-info {
-  font-size: 12px;
-  color: white;
-}
-
-footer .footer-title, footer .footer-info {
-  cursor: pointer;
-}
-
-@media screen and (min-width: 548px) {
-  .cssmap-650 .continents {
-    height: 100px;
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .footer {
-    position: relative;
-  }
-  .footer .footer__maps {
-    position: relative;
-    height: 200px;
-    overflow: hidden !important;
-    overflow: hidden;
-  }
-  .footer .footer__maps .cssmap-container {
-    position: absolute;
-    right: 0;
-    opacity: 0.1;
-    pointer-events: none;
-  }
-  .cssmap-650 .continents {
-    height: 174px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  footer {
-    padding: 3rem;
-    position: relative;
-  }
-  footer .footer__maps {
-    display: block;
-  }
-  footer .footer__maps .cssmap-container {
-    position: relative;
-    pointer-events: inherit;
-    opacity: 1;
-  }
-  footer .footer__maps #demo-markers {
-    display: block;
-  }
-  footer .footer_copy {
-    width: 100%;
-    background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(50%, #111111), color-stop(70%, rgba(17, 17, 17, 0.9)), to(rgba(17, 17, 17, 0)));
-    background: linear-gradient(to top, #111111 0%, #111111 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 5;
-  }
-  footer .footer_content {
-    border-bottom: transparent;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-}
-
-/*=============================
 *           Company Lists
 ==============================*/
 .company_bg {
@@ -327,6 +193,7 @@ footer .footer-title, footer .footer-info {
   left: 0;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .company_lists .company_list--item {
@@ -548,7 +415,7 @@ footer .footer-title, footer .footer-info {
 }
 
 .color-black {
-  background-color: #111111;
+  background-color: #111111 !important;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -573,7 +440,60 @@ footer .footer-title, footer .footer-info {
 }
 
 .white-spacer {
-  height: 150px;
+  padding-top: 150px;
+}
+
+.section {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.section-full-width {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.page-footer {
+  background-color: white;
+  color: #1a1a1a;
+  padding: 5rem 2rem 1rem 2rem;
+  font-size: 11px;
+}
+
+.page-footer .footer-link {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.page-footer .footer-link .footer-lists {
+  margin-left: -30px;
+}
+
+.page-footer .footer-link .footer-lists li {
+  display: block;
+  padding-right: 5px;
+  font-size: 11px;
+}
+
+.page-footer .footer-link .footer-lists li a {
+  text-decoration: none;
+  color: #111111;
+}
+
+.page-footer .footer-copy {
+  display: block;
+}
+
+.page-footer .footer-copy .footer-dev {
+  font-size: 12px;
+  font-weight: 100;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.page-footer .footer-copy .footer-dev span {
+  font-weight: 700;
 }
 
 @media screen and (min-width: 768px) {
@@ -624,6 +544,23 @@ footer .footer-title, footer .footer-info {
   .page-content .container {
     width: 70%;
   }
+  .page-footer {
+    padding: 5rem 5rem 1rem 5rem;
+  }
+  .page-footer .footer-copy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .page-footer .footer-copy .footer-address {
+    max-width: 500px;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -641,8 +578,167 @@ footer .footer-title, footer .footer-info {
 
 @media screen and (min-width: 1200px) {
   .page-title_bg .line {
-    font-size: 320px;
+    font-size: 250px;
     letter-spacing: 0;
+  }
+}
+
+/*=============================
+*           Footer
+==============================*/
+.contact-footer {
+  height: 100vh;
+  background-color: #111111 !important;
+}
+
+footer {
+  position: relative;
+  background-color: #111111;
+  color: white;
+  display: block;
+}
+
+footer .footer_content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #303030;
+  margin-bottom: 3rem;
+}
+
+footer .footer_content h5 {
+  font-size: 12px;
+  color: #303030;
+}
+
+footer .footer_content .footer-info {
+  font-size: 12px;
+  color: white;
+}
+
+footer .header-split {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+footer .footer__maps {
+  background-color: #111111;
+  overflow: hidden;
+}
+
+footer .footer__maps .cssmap-container {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+footer .footer__maps #demo-markers {
+  display: none;
+}
+
+footer .footer_copy {
+  background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(50%, #111111), color-stop(70%, rgba(17, 17, 17, 0.9)), to(rgba(17, 17, 17, 0)));
+  background: linear-gradient(to top, #111111 0%, #111111 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+footer .footer_copy h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+footer .footer_copy h5 {
+  font-size: 12px;
+  color: #303030;
+}
+
+footer .footer_copy .footer-info {
+  font-size: 12px;
+  color: white;
+}
+
+footer .footer-title, footer .footer-info {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 548px) {
+  .cssmap-650 .continents {
+    height: 100px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    position: relative;
+  }
+  .footer .footer__maps {
+    position: relative;
+    height: 200px;
+    overflow: hidden !important;
+    overflow: hidden;
+  }
+  .footer .footer__maps .cssmap-container {
+    position: absolute;
+    right: 0;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  .cssmap-650 .continents {
+    height: 174px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    position: relative;
+  }
+  .footer .footer__maps {
+    position: relative;
+    height: 170px;
+    overflow: hidden !important;
+    overflow: hidden;
+  }
+  .footer .footer__maps .cssmap-container {
+    position: absolute;
+    right: 0;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  .cssmap-650 .continents {
+    height: 174px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  footer {
+    padding: 3rem;
+    position: relative;
+  }
+  footer .footer__maps .cssmap-container {
+    position: relative;
+    pointer-events: inherit;
+    opacity: 1;
+  }
+  footer .footer__maps #demo-markers {
+    display: block;
+  }
+  footer .footer_copy {
+    width: 100%;
+    background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(50%, #111111), color-stop(70%, rgba(17, 17, 17, 0.9)), to(rgba(17, 17, 17, 0)));
+    background: linear-gradient(to top, #111111 0%, #111111 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+  footer .footer_content {
+    border-bottom: transparent;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -655,6 +751,10 @@ body {
 
 p {
   line-height: 1.5rem;
+}
+
+.bg-dark {
+  background-color: #111111 !important;
 }
 
 .offcanvas-start {

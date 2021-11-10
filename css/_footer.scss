@@ -1,0 +1,187 @@
+/*=============================
+*           Footer
+==============================*/
+.contact-footer {
+    height: 100vh;
+    background-color: #111111 !important;
+}
+
+footer {
+    position: relative;
+    background-color: #111111;
+    color: white;
+    display: block;
+
+    .footer_content {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid #303030;
+        margin-bottom: 3rem;
+
+        h5 {
+            font-size: 12px;
+            color: #303030;
+        }
+
+        .footer-info {
+            font-size: 12px;
+            color: white;
+        }
+    }
+
+    .header-split {
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+
+    .footer__maps {
+        background-color: #111111;
+        .cssmap-container {
+            position: absolute;
+            bottom: 10%;
+            right: 0;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        overflow: hidden;
+        #demo-markers {
+            display: none;
+        }
+    }
+
+    .footer_copy {
+     
+        background: linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0.9) 70%,  rgba(17,17,17,0) 100%);
+        font-size: 12px;
+        letter-spacing: 2px;
+        h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        h5 {
+            font-size: 12px;
+            color: #303030;
+        }
+
+        .footer-info {
+            font-size: 12px;
+            color: white;
+        }
+    }
+
+    .footer-title, .footer-info {
+        cursor: pointer;
+    }
+    
+}
+
+@media screen and (min-width: 548px){
+    .cssmap-650 .continents {
+        height: 100px;
+        overflow: hidden;
+    }
+}   
+
+@media screen and (max-width: 767px) {
+
+    .footer {
+        position: relative;
+        .footer__maps {
+            position: relative;
+            height: 200px;
+            overflow: hidden !important; 
+            .cssmap-container {
+                position: absolute;
+                right: 0;
+                opacity: 0.1;
+                pointer-events: none;
+            }
+            overflow: hidden;
+           
+        }
+
+        
+    }
+    
+    .cssmap-650 .continents {
+        height: 174px;
+    }
+}
+
+@media screen  and (min-width: 576px) and (max-width: 767px) {
+
+
+    
+}
+
+@media screen and (min-width: 768px) {
+
+    .footer {
+        position: relative;
+        .footer__maps {
+            position: relative;
+            height: 170px;
+            overflow: hidden !important; 
+           
+            .cssmap-container {
+                position: absolute;
+                right: 0;
+                opacity: 0.1;
+                pointer-events: none;
+            }
+            overflow: hidden;
+           
+        }
+
+        
+    }
+
+    .cssmap-650 .continents {
+        height: 174px;
+    }
+
+   
+}
+
+
+
+@media screen and (min-width: 900px) {
+    footer {
+        padding: 3rem;
+        position: relative;
+
+        .footer__maps {
+            // display: block;
+            .cssmap-container {
+                position: relative;
+                pointer-events: inherit;
+                opacity: 1;
+            }
+            #demo-markers {
+                display: block;
+            }
+        }
+
+        .footer_copy {
+            width: 100%;
+            background: linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0.9) 70%,  rgba(17,17,17,0) 100%);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 5;
+        }
+
+        .footer_content {
+            border-bottom: transparent;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        
+
+        
+    }
+    
+}
