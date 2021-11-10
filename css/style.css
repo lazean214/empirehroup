@@ -571,11 +571,6 @@
   transition: 0.3s ease-in-out;
 }
 
-.gallery-item img:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-}
-
 .gallery-item .img-info-overlay {
   position: absolute;
   bottom: -50px;
@@ -593,6 +588,11 @@
 .gallery-item .img-info-overlay .img-info-subheader {
   font-weight: 400;
   color: grey;
+}
+
+.gallery-item:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .gallery-item:hover .img-info-overlay {
