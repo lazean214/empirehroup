@@ -59,11 +59,7 @@
     }
 
     .footer-copy {
-        display: block;
-        .footer-address {
-
-        }
-    
+        display: block;    
         .footer-dev {
             font-size: 12px;
             font-weight: 100;
@@ -80,14 +76,39 @@
 }
 
 .gallery-item {
+    position: relative;
     overflow: hidden;
     img {
         filter: grayscale(100%);
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
         
         &:hover {
             filter: grayscale(0);
-            transform: scale(1.2);
+            // transform: scale(1.2);
+
+         
+        }
+    }
+
+    .img-info-overlay {
+        position: absolute;
+        bottom:-50px;
+        left: 10px;
+        color: white;
+        transition: 0.5s ease-in-out;
+        .img-info-header {
+            font-weight: 700;
+        }
+
+        .img-info-subheader {
+            font-weight: 400;
+            color: grey;
+        }
+    }
+
+    &:hover {
+        .img-info-overlay {
+            bottom: 10px;
         }
     }
 }
