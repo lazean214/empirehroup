@@ -583,6 +583,7 @@
   color: white;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 .gallery-item .img-info-overlay .img-info-header {
