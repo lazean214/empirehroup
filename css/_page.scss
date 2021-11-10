@@ -5,7 +5,7 @@
 .page-title_bg {
 
     position: relative;
-
+    
     .page-title_bg-split {
 
         display: none;
@@ -25,6 +25,10 @@
 .section-full-width {
     padding-right: 0;
     padding-left: 0;
+}
+
+.section-auto-height {
+    height: auto !important;
 }
 
 .page-footer {
@@ -80,6 +84,9 @@
 
 @media screen and (min-width: 768px) {
 
+    .white-spacer {
+        padding-top: 50px;
+    }
    
 
     .page-header {

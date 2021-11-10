@@ -1,26 +1,27 @@
 /*===================================
   * Owl Carousel
   ===================================*/
-  .owl-full{
+.owl-full {
     .item {
         height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-blend-mode: multiply;
-          background-color: rgba(0,0,0, 0.7);
-          color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
     }
 }
 
 .video-overlay {
-  
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  video {
-      transform: scale(1.2);
-  }
+
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    video {
+        transform: scale(1.2);
+    }
 }
 
 .slider-overlay {
@@ -30,11 +31,12 @@
     height: 100%;
     width: 100%;
     transition: 0.2s;
+
     .slider-title {
         position: absolute;
         top: 12%;
         left: 10%;
-      //   transform: translate(-10%, -10%);
+        //   transform: translate(-10%, -10%);
 
         h1 {
             font-size: 30px;
@@ -53,118 +55,169 @@
 
 
 @media screen and (min-width: 768px) {
-  .slider-overlay {
+    .slider-overlay {
 
-      .slider-title {
-          position: absolute;
-          top: 40%;
-          left: 20%;
-          transform: translate(-50%, 20%);
-          
-          h1 {
-              font-size: 63px;
-              font-weight: 700;
-          }
+        .slider-title {
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            transform: translate(-50%, 20%);
 
-      }
-  }
+            h1 {
+                font-size: 63px;
+                font-weight: 700;
+            }
 
-  .clickHold{
-      background: url(https://yodezeen.com/wp-content/uploads/2020/03/1.jpg);
-      background-size: cover;
-      background-position: center;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+        }
     }
-    
+
+    .clickHold {
+        background: url(https://yodezeen.com/wp-content/uploads/2020/03/1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
     .slider-overlay-clicked {
-        background-color: rgba(255,255,255,1);
+        background-color: rgba(255, 255, 255, 1);
         color: black;
-    
+
         h4 {
             letter-spacing: 5px;
         }
     }
-    
+
 }
 
-
-.owl-item.active h1 {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-name: fadeInDown;
-  animation-delay: 0.3s;
-}
-.owl-item.active h2 {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-name: fadeInDown;
-  animation-delay: 0.3s;
-}
-.owl-item.active h4 {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-name: fadeInUp;
-  animation-delay: 0.3s;
-}
-.owl-item.active .line {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-name: fadeInLeft;
-  animation-delay: 0.3s;
-}
-
-
-
-.owl-theme {
-  .owl-nav {
-      position: absolute;
-      bottom: 10%;
-      right: 10%;
-      background-color: orange;
-
-     
-  }
-
-  .owl-dots {
-      position: absolute;
-      bottom: 5%;
-      right: 5%;
-
-      
-  }
-
-  .owl-dots .owl-dot {
-      margin: 0px 5px;
+.slider-hero {
+    .owl-item.active h1 {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInDown;
+        animation-delay: 0.3s;
     }
+
+    .owl-item.active h2 {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInDown;
+        animation-delay: 0.3s;
+    }
+
+    .owl-item.active h4 {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInUp;
+        animation-delay: 0.3s;
+    }
+
+    .owl-item.active .line {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInLeft;
+        animation-delay: 0.3s;
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+
+
+    }
+
+    .owl-dots .owl-dot {
+        margin: 0px 5px;
+    }
+
     .owl-dots .owl-dot button {
-      background: none;
-      border: none;
-      padding: 0;
-      color: #ffffff;
-      font-size: 14px;
-      // font-weight: bold;
-      cursor: pointer;
-      opacity: 0.6;
-      text-align: left;
+        background: none;
+        border: none;
+        padding: 0;
+        color: #ffffff;
+        font-size: 14px;
+        // font-weight: bold;
+        cursor: pointer;
+        opacity: 0.6;
+        text-align: left;
     }
-    .owl-dots .owl-dot button:focus {
-      outline: none;
-    }
-    .owl-dots .owl-dot.active button {
-      color: #ffffff;
-      opacity: 1;
-    }
-    
 
+    .owl-dots .owl-dot button:focus {
+        outline: none;
+    }
+
+    .owl-dots .owl-dot.active button {
+        color: #ffffff;
+        opacity: 1;
+    }
+
+    .owl-nav {
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        background-color: orange;
+    }
+}
+
+.slider-page-gallery {
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    .owl-nav {
+        // background-color: orange;
+        // margin-top: -30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button.owl-prev {
+            span {
+                font-size: 30px;
+            }
+        }
+
+        button.owl-next {
+            span {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .owl-dots {
+    display: flex;
+    justify-content: center;
+       margin-top: -25px;
+       align-items: center;
+    }
+
+    .owl-dots .owl-dot button {
+        background: none;
+        border: none;
+        padding: 0 10px;
+        color: #111111;
+        font-size: 14px;
+        // font-weight: bold;
+        cursor: pointer;
+        opacity: 0.6;
+        text-align: left;
+    }
+
+    .owl-dots .owl-dot button:focus {
+        outline: none;
+    }
+
+    .owl-dots .owl-dot.active button {
+        color: #111111;
+        opacity: 1;
+    }
 
 }

@@ -46,7 +46,7 @@ $(window).scroll(function() {
 
 // OWl Carousel
 $(document).ready(function() {
-  $('.owl-carousel').owlCarousel({
+  $('.slider-hero').owlCarousel({
     stagePadding: 0,
     loop: true,
     margin: 0,
@@ -69,7 +69,38 @@ $(document).ready(function() {
         items: 1,
         nav: false,
         loop: true,
-        margin: 20
+        margin: 0
+      }
+    }
+  })
+})
+
+// OWl Carousel
+$(document).ready(function() {
+  $('.slider-page-gallery').owlCarousel({
+    stagePadding: 0,
+    loop: true,
+    margin: 0,
+    responsiveClass: true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    animateOut: 'fadeOut',
+    dotsData: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true
+      },
+      600: {
+        items: 1,
+        nav: true
+      },
+      1000: {
+        items: 1,
+        nav: true,
+        loop: true,
+        margin: 0
       }
     }
   })
