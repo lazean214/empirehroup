@@ -480,3 +480,22 @@ div.clickEffect {
         }
     }
 }
+
+.offcanvasmenu {
+
+        .dropdown-menu {
+            background-color: #111111 !important;
+            color: white;
+            border: 0;
+        }
+        .dropdown-item {
+            color: white;
+            text-align: left;
+            padding-left: 2rem;
+            font-size: 20px;
+            &:hover {
+                color: #111111;
+            }
+        }
+
+}
