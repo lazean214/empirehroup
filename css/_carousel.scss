@@ -33,8 +33,8 @@
     transition: 0.2s;
 
     .slider-title {
-        position: absolute;
-        top: 12%;
+        position: fixed;
+        top: 20%;
         left: 10%;
         //   transform: translate(-10%, -10%);
 
@@ -49,19 +49,24 @@
             font-size: 16px;
         }
     }
+
+
 }
 
-
-
+.slider-hero {
+    .owl-dots .owl-dot button {
+        text-align: center;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .slider-overlay {
 
         .slider-title {
-            position: absolute;
+            position: fixed;
             top: 40%;
-            left: 20%;
-            transform: translate(-50%, 20%);
+            left: 10%;
+            // transform: translate(-50%, -20%);
 
             h1 {
                 font-size: 63px;
@@ -173,12 +178,14 @@
     position: relative;
     padding-top: 3rem;
     padding-bottom: 2rem;
+
     .owl-nav {
         // background-color: orange;
         // margin-top: -30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         button.owl-prev {
             span {
                 font-size: 30px;
@@ -193,10 +200,10 @@
     }
 
     .owl-dots {
-    display: flex;
-    justify-content: center;
-       margin-top: -25px;
-       align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: -25px;
+        align-items: center;
     }
 
     .owl-dots .owl-dot button {

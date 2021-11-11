@@ -38,6 +38,7 @@ footer {
 
     .footer__maps {
         background-color: #111111;
+
         .cssmap-container {
             position: absolute;
             bottom: 10%;
@@ -45,17 +46,20 @@ footer {
             opacity: 0.1;
             pointer-events: none;
         }
+
         overflow: hidden;
+
         #demo-markers {
             display: none;
         }
     }
 
     .footer_copy {
-     
-        background: linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0.9) 70%,  rgba(17,17,17,0) 100%);
+
+        background: linear-gradient(to top, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
         font-size: 12px;
         letter-spacing: 2px;
+
         h4 {
             font-size: 12px;
             text-transform: uppercase;
@@ -72,78 +76,80 @@ footer {
         }
     }
 
-    .footer-title, .footer-info {
+    .footer-title,
+    .footer-info {
         cursor: pointer;
     }
-    
+
 }
 
-@media screen and (min-width: 548px){
+@media screen and (min-width: 548px) {
     .cssmap-650 .continents {
         height: 100px;
         overflow: hidden;
     }
-}   
+}
 
 @media screen and (max-width: 767px) {
 
     .footer {
         position: relative;
+
         .footer__maps {
             position: relative;
             height: 200px;
-            overflow: hidden !important; 
+            overflow: hidden !important;
+
             .cssmap-container {
                 position: absolute;
                 right: 0;
                 opacity: 0.1;
                 pointer-events: none;
             }
+
             overflow: hidden;
-           
+
         }
 
-        
+
     }
-    
+
     .cssmap-650 .continents {
         height: 174px;
     }
 }
 
-@media screen  and (min-width: 576px) and (max-width: 767px) {
-
-
-    
-}
+@media screen and (min-width: 576px) and (max-width: 767px) {}
 
 @media screen and (min-width: 768px) {
 
     .footer {
         position: relative;
+
         .footer__maps {
             position: relative;
             height: 170px;
-            overflow: hidden !important; 
-           
+            overflow: hidden !important;
+
             .cssmap-container {
                 position: absolute;
                 right: 0;
                 opacity: 0.1;
                 pointer-events: none;
             }
+
             overflow: hidden;
-           
+
         }
 
-        
+
     }
 
     .cssmap-650 .continents {
         height: 174px;
     }
 
-   
+
 }
 
 
@@ -154,12 +160,14 @@ footer {
         position: relative;
 
         .footer__maps {
+
             // display: block;
             .cssmap-container {
                 position: relative;
                 pointer-events: inherit;
                 opacity: 1;
             }
+
             #demo-markers {
                 display: block;
             }
@@ -167,7 +175,7 @@ footer {
 
         .footer_copy {
             width: 100%;
-            background: linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0.9) 70%,  rgba(17,17,17,0) 100%);
+            background: linear-gradient(to top, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 50%, rgba(17, 17, 17, 0.9) 70%, rgba(17, 17, 17, 0) 100%);
             position: absolute;
             left: 0;
             bottom: 0;
@@ -180,9 +188,9 @@ footer {
             margin-bottom: 0;
         }
 
-        
 
-        
+
+
     }
-    
+
 }
