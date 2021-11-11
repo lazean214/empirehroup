@@ -462,10 +462,10 @@ div.clickEffect {
 
 .centered-content {
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    // padding-bottom: 3rem;
 }
 
-@media screen and(min-width: 768px) {
+@media screen and(min-width: 769px) {
     .centered-content {
         // background-color: orange;
         position: relative;
@@ -475,7 +475,7 @@ div.clickEffect {
             position: absolute;
             top:50%;
             left: 0;
-            padding: 5rem;
+            padding: 0 5rem;
             transform: translateY(-50%);
         }
     }

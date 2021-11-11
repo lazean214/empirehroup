@@ -1294,10 +1294,9 @@ div.clickEffect {
 
 .centered-content {
   padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .centered-content {
     position: relative;
     height: 100%;
@@ -1306,7 +1305,7 @@ div.clickEffect {
     position: absolute;
     top: 50%;
     left: 0;
-    padding: 5rem;
+    padding: 0 5rem;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
