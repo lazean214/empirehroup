@@ -5,7 +5,7 @@
 .page-title_bg {
 
     position: relative;
-
+ 
     .page-title_bg-split {
 
         display: none;
@@ -132,10 +132,10 @@
     .page-title_bg {
         display: flex;
         position: absolute;
-        left: 50%;
-        top: 10%;
-        transform: translate(-50%, -10%);
-        z-index: 1;
+        left: 0;
+        top: 0;
+        // transform: translate(-50%, -10%);
+        z-index: -1;
         opacity: .02;
         width: 100%;
         color: #000000;
