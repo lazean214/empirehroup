@@ -90,6 +90,10 @@ button:focus {
 }
 
 
+img {
+    filter: grayscale(90%);
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px
@@ -418,6 +422,11 @@ div.clickEffect {
 /**
 *   Gallery Filter
 */
+
+.filter-nav {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
 .filter-button {
     border: none;
