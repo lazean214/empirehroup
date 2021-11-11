@@ -521,7 +521,7 @@
 .page-footer {
   background-color: white;
   color: #1a1a1a;
-  padding: 5rem 2rem 1rem 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   font-size: 11px;
 }
 
@@ -651,7 +651,10 @@
     width: 70%;
   }
   .page-footer {
-    padding: 5rem 5rem 1rem 5rem;
+    padding: 5rem 0 1rem 0;
+  }
+  .page-footer .footer-link .footer-lists {
+    display: inline-block !important;
   }
   .page-footer .footer-copy {
     display: -webkit-box;
@@ -1246,10 +1249,6 @@ div.clickEffect {
 /**
 * Image Compare
 */
-.juxtapose img {
-  width: 100%;
-}
-
 /**
 *   Gallery Filter
 */
