@@ -933,11 +933,6 @@ button:focus {
   outline: 0 !important;
 }
 
-img {
-  -webkit-filter: grayscale(90%);
-          filter: grayscale(90%);
-}
-
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;
