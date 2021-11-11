@@ -334,7 +334,7 @@
             <h2 class="wow fadeInUp">Lets talk about <br>your project</h2>
             <p class="wow fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur incidunt quia est nobis labore, suscipit commodi quam quisquam officiis at, assumenda aliquid repellendus ducimus architecto explicabo ipsam quos? Eveniet.</p>
 
-            <button class="btn btn-empire">Send Request</button>
+            <button class="btn btn-empire" data-bs-toggle="modal" data-bs-target="#contactModal">Send Request</button>
           </div>
         </div>
      </div>
@@ -362,6 +362,67 @@
       </div>
     </div>
   </div> <!-- End of Wrapper-->
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="contactModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-fullscreen">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-form">
+        <h2>Don't hesitate to contact us</h2>
+        <form action="">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">E-mail</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="+971 ">
+                <label for="floatingInput">Phone</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+
+              <div class="form-floating mb-3">
+                <select name="" id="" class="form-control">
+                  <option value="#">UAE</option>
+                  <option value="#">UAE</option>
+                  <option value="#">UAE</option>
+                </select>
+                <label for="floatingInput">Your city</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="message"
+                  aria-multiline="true">
+                <label for="floatingInput">Message</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <button type="button" class="btn btn-empire theme-white " >Send</button>
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
